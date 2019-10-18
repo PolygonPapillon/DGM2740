@@ -1,0 +1,38 @@
+header {
+
+  
+    }
+    
+nav {
+        
+       ul {
+        
+        border-left: 1px solid rgba(0,0,0,0.3);
+        ul li {width: auto;}
+        ul li a {padding: .5rem 1rem;}  
+        }
+    }    
+    
+
+
+main {
+    
+    
+    
+    picture.founderPic {float: right; width: 58.3%-$dblgutter;}
+    picture.founderPic img {}
+    
+    article.newspaper {
+        column-count: 2;
+            -webkit-column-count: 2; /* Chrome, Safari, Opera*/
+            -moz-column-count: 2; /* Firefox*/
+        column-rule: 1px solid $secondaryColor;
+            -webkit-column-rule: 1px solid $secondaryColor; /* Chrome, Safari, Opera*/
+            -moz-column-rule: 1px solid $secondaryColor; /* Firefox*/
+        column-gap: $gutter;
+            -webkit-column-gap: $gutter; /* Chrome, Safari, Opera*/
+            -moz-column-gap: $gutter; /* Firefox*/
+    }
+    
+  //  div.events article:nth-child(2n+1) {background-color: red;}
+}

@@ -1,0 +1,11 @@
+$primaryColor: #E66F00;
+$secondaryColor: #FC2C0D;
+$accent: #FFFF00;
+$fontColor: darken($primaryColor, 20%);
+
+$gutter: 2%;
+$dblgutter: (2 * $gutter);
+
+$defaultFont: 'PT Sans Narrow', sans-serif;
+$normalWeight:400;
+$boldWeight:700;
