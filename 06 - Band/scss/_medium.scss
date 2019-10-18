@@ -1,0 +1,40 @@
+header {
+    position: relative;
+    ul.social{
+        position: absolute;
+        bottom: .5rem;
+        right: $gutter;
+    }
+    ul.social li {width: auto;}
+  
+    }
+    
+nav {
+        
+       ul {
+        
+        border-left: 1px solid rgba(0,0,0,0.3);
+        ul li {width: auto;}
+        ul li a {padding: .5rem 1rem;}  
+        }
+    }    
+    
+
+
+main {
+    
+    
+    figure.photo {width: 50%-$gutter;}
+    
+    figure.founder {width: 58.3vw; float: right;}
+    figure.founder img {width: 100%;}
+    
+
+    div.member article {
+        float: left;
+        width: 50%-$dblgutter;
+    }
+    
+    
+
+}
