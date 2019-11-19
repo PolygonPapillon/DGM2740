@@ -1,0 +1,46 @@
+
+
+body {padding: 0; background-image: url(../images/sayagata-400px-pattern.png)}
+header, nav, main, footer {max-width: 80rem; margin: 0 auto;}
+
+div#mainWrapper {
+    //max-width: 75rem;
+    margin: 0 auto;
+    box-shadow: 0 0 10px #000;
+    background-color: #FFF;
+}
+div#headerWrapper {
+    background-color: $accent;
+}
+
+
+header {
+    
+    
+}
+
+nav {
+    //ul li {width: 5rem;}
+    
+} // end nav
+
+main {
+    
+    div.storyGrid {
+        grid-template-columns: repeat(4, 1fr);
+        
+    }
+    
+    figure.mainStory {
+        grid-column: 1 / span 3;
+        grid-row: 1 / span 2;
+    }
+
+   
+} // end main
+
+footer {
+    div.linkGrid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
