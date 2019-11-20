@@ -65,21 +65,11 @@ body {
 /* ------------------------- header ------------------------- */
 header {
   height: 130px;
-  background-color: #c6ff4d;
+  background-color: #AED0E6;
   position: relative;
-  color: black;
+  color: #1D5D85;
   padding: 2%;
-  /* social icons */ }
-  header figure.logo {
-    position: absolute;
-    bottom: 2%;
-    left: 2%;
-    top: 4%; }
-  header figure.logo img {
-    width: 96%;
-    float: left;
-    border-radius: 2%;
-    padding-right: 4%; }
+  border-bottom: 5px solid #1D5D85; }
   header form {
     float: right; }
   header form input {
@@ -91,8 +81,6 @@ header {
     transition: width .5s; }
   header form input:focus {
     width: 8rem; }
-  header h1, header h2 {
-    margin-left: 120px; }
   header h1 {
     font-size: 2rem;
     font-weight: 400;
@@ -100,114 +88,152 @@ header {
   header h2 {
     font-size: 1.2rem;
     font-weight: 400; }
-  header ul.social {
-    margin-left: 120px;
-    margin-top: 5px; }
-  header ul.social li {
-    list-style-type: none;
-    float: left;
-    width: 25%; }
-  header ul.social li a {
-    display: block;
-    margin: 0 auto;
-    background-image: url(../images/socialSprites.png);
-    height: 45px;
-    width: 45px; }
-  header ul.social .twitter a {
-    background-position: -90px -45px; }
-  header ul.social .facebook a {
-    background-position: -45px -45px; }
-  header ul.social .youtube a {
-    background-position: -225px -45px; }
-  header ul.social .twitter a:hover {
-    background-position: -90px 0px; }
-  header ul.social .facebook a:hover {
-    background-position: -45px 0px; }
-  header ul.social .youtube a:hover {
-    background-position: -225px 0px; }
 
 /* ------------------------- navigation ------------------------- */
 div#navWrapper {
-  background-color: #59A11E;
-  border-top: 5px solid #A550FF; }
+  background-color: #AED0E6;
+  border-top: 5px solid #617480; }
 
 nav ul li {
   float: left;
-  width: 25%;
+  width: 16.6666666667%;
   border-right: 1px solid rgba(0, 0, 0, 0.3);
   border-bottom: 1px solid rgba(0, 0, 0, 0.3); }
-nav ul li:last-child {
-  border-right: 1px solid rgba(0, 0, 0, 0.3); }
 nav ul li a {
   display: block;
   text-align: center;
   font-weight: 700;
   padding: .5rem 0;
-  color: #AEFF00;
+  color: #1D5D85;
   text-decoration: none;
   transition: background 0.75s ease, color 0.75s ease; }
 nav ul li a:hover {
-  color: #71cc26;
-  background-color: #A550FF; }
+  color: #d5e7f2;
+  background-color: #617480; }
 nav ul li.active a {
-  background-color: #356112;
-  color: #c6ff4d; }
+  background-color: #74aed4;
+  color: #2b89c4; }
 
 /* ------------------------- main ------------------------- */
 main {
+  /*----- COLUMNS -----*/
   background-color: #FFF; }
-  main article {
-    margin: 0.5rem 2%; }
-  main article.lazyGallery figure {
-    width: 100%;
-    height: 0;
-    padding-bottom: 66%; }
-  main article.lazyGallery figure img {
-    width: 100%; }
+  main div.columnSet {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 2%; }
+  main .small-1 {
+    flex-basis: 8.3333333333%; }
+  main .small-2 {
+    flex-basis: 16.6666666667%; }
+  main .small-3 {
+    flex-basis: 25%; }
+  main .small-4 {
+    flex-basis: 33.3333333333%; }
+  main .small-5 {
+    flex-basis: 41.6666666667%; }
+  main .small-6 {
+    flex-basis: 50%; }
+  main .small-7 {
+    flex-basis: 58.3333333333%; }
+  main .small-8 {
+    flex-basis: 66.6666666667%; }
+  main .small-9 {
+    flex-basis: 75%; }
+  main .small-10 {
+    flex-basis: 83.3333333333%; }
+  main .small-11 {
+    flex-basis: 91.6666666667%; }
+  main .small-12 {
+    flex-basis: 100%; }
   main figure.chair {
-    width: 31%;
-    float: right;
-    -webkit-clip-path: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
-    shape-outside: circle(50% at 50% 50%);
     margin: .25rem; }
   main figure.chair img {
     width: 100%; }
   main h1 {
     font-size: 2rem;
     margin: 1rem 0 0 2%;
-    color: #A550FF; }
+    color: #617480; }
   main h2 {
     font-size: 1.5rem;
     margin: 0.75rem 0 0 2%;
-    color: #bf83ff; }
+    color: #7a8e9a; }
   main h3 {
     font-size: 1.2rem;
     margin: 0.5rem 2%;
-    color: #7100e9; }
+    color: #353f46; }
   main p {
     line-height: 120%;
-    color: #7B00D4;
+    color: #2F383D;
     margin: .75rem; }
-  main div.member article {
+  main a {
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    padding: .5rem 0;
+    color: #1D5D85;
+    text-decoration: none; }
+  main button {
+    background-color: #2F383D;
+    font-variant-caps: all-small-caps;
+    color: #AED0E6;
+    padding-top: 5px;
+    padding-bottom: 8px;
+    padding-left: 18px;
+    padding-right: 18px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    border-radius: 10px; }
+  main div.actionCall {
+    background-color: #617480;
+    border: solid #FFF 5px;
+    margin: auto;
+    text-align: center; }
+  main div.actionCall h3 {
+    font-variant-caps: all-small-caps;
+    color: #AED0E6;
+    font-size: 2rem;
+    padding-top: .75rem;
+    padding-bottom: .75rem; }
+  main div.blogPost article {
     margin: 0.5rem 2%;
-    width: 96%; }
+    width: 100%; }
+    main div.blogPost article figure img {
+      height: 150px; }
+  main article.attorney {
+    margin: 0.5rem 2%;
+    width: 96%;
+    text-align: center;
+    background-color: #AED0E6;
+    border: 1px solid #617480; }
+    main article.attorney figure {
+      width: 100%;
+      padding: 0;
+      margin: 0; }
   main hr.fadeAway {
-    background: linear-gradient(to right, #eb14ea 0%, rgba(252, 194, 13, 0) 100%);
+    background: linear-gradient(to right, #1d5d85 0%, rgba(29, 93, 133, 0) 100%);
     height: 4px;
     border: none;
     margin: 0.5rem 2%; }
 
 /* ------------------------- footer ------------------------- */
 div#footerWrapper {
-  background-color: #A550FF;
-  border-top: 5px solid #AEFF00; }
+  background-color: #617480;
+  border-top: 5px solid #1D5D85; }
 
 footer {
-  width: 100%; }
+  width: 100%;
+  border-top: 3px solid #0e1012; }
+  footer div.icons {
+    text-align-last: center;
+    margin: 10px 2%; }
+  footer div.icons i {
+    color: #1D5D85;
+    font-size: 2rem;
+    padding: 0 15px; }
   footer p {
     text-align: center;
-    color: #7B00D4;
+    color: #0e1012;
     padding: .75rem 0;
     font-size: .9rem; }
 
@@ -220,34 +246,43 @@ footer {
 /* media query */
 @media only screen and (min-width: 35rem) {
   header {
-    position: relative; }
-    header ul.social {
-      position: absolute;
-      bottom: .5rem;
-      right: 2%; }
-    header ul.social li {
-      width: auto; }
+    position: relative;
+    height: 120px; }
 
   nav ul {
     border-left: 1px solid rgba(0, 0, 0, 0.3); }
     nav ul ul li {
       width: auto; }
     nav ul ul li a {
-      padding: .5rem 1rem; }
+      padding: .5rem .5rem; }
 
-  main figure.photo {
-    width: 48%; }
-  main figure.founder {
-    width: 58.3vw;
-    float: right; }
-  main figure.founder img {
-    width: 100%; }
-  main div.member article {
-    float: left;
-    width: 46%; } }
+  main .medium-1 {
+    flex-basis: 8.3333333333%; }
+  main .medium-2 {
+    flex-basis: 16.6666666667%; }
+  main .medium-3 {
+    flex-basis: 25%; }
+  main .medium-4 {
+    flex-basis: 33.3333333333%; }
+  main .medium-5 {
+    flex-basis: 41.6666666667%; }
+  main .medium-6 {
+    flex-basis: 50%; }
+  main .medium-7 {
+    flex-basis: 58.3333333333%; }
+  main .medium-8 {
+    flex-basis: 66.6666666667%; }
+  main .medium-9 {
+    flex-basis: 75%; }
+  main .medium-10 {
+    flex-basis: 83.3333333333%; }
+  main .medium-11 {
+    flex-basis: 91.6666666667%; }
+  main .medium-12 {
+    flex-basis: 100%; } }
 /* end media query */
 /* media query */
-@media only screen and (min-width: 75rem) {
+@media only screen and (min-width: 60rem) {
   body {
     padding: 0;
     background-image: url(../images/sayagata-400px-pattern.png); }
@@ -263,53 +298,35 @@ footer {
     background-color: #FFF; }
 
   div#headerWrapper {
-    background-color: #AEFF00; }
+    background-color: #1D5D85; }
 
   nav ul li {
-    width: 10rem; }
+    width: 5rem; }
 
-  main .row {
-    clear: both; }
-  main .column {
-    padding: 0 2%; }
-  main .large-i {
-    width: 8.3333333333%;
-    float: left; }
-  main .large-i {
-    width: 16.6666666667%;
-    float: left; }
-  main .large-i {
-    width: 25%;
-    float: left; }
-  main .large-i {
-    width: 33.3333333333%;
-    float: left; }
-  main .large-i {
-    width: 41.6666666667%;
-    float: left; }
-  main .large-i {
-    width: 50%;
-    float: left; }
-  main .large-i {
-    width: 58.3333333333%;
-    float: left; }
-  main .large-i {
-    width: 66.6666666667%;
-    float: left; }
-  main .large-i {
-    width: 75%;
-    float: left; }
-  main .large-i {
-    width: 83.3333333333%;
-    float: left; }
-  main .large-i {
-    width: 91.6666666667%;
-    float: left; }
-  main .large-i {
-    width: 100%;
-    float: left; }
-  main article {
-    margin: .5rem 15%; }
-  main div.member article {
-    width: 21%; } }
+  main div.actionCall {
+    margin: 0; }
+  main .large-1 {
+    flex-basis: 8.3333333333%; }
+  main .large-2 {
+    flex-basis: 16.6666666667%; }
+  main .large-3 {
+    flex-basis: 25%; }
+  main .large-4 {
+    flex-basis: 33.3333333333%; }
+  main .large-5 {
+    flex-basis: 41.6666666667%; }
+  main .large-6 {
+    flex-basis: 50%; }
+  main .large-7 {
+    flex-basis: 58.3333333333%; }
+  main .large-8 {
+    flex-basis: 66.6666666667%; }
+  main .large-9 {
+    flex-basis: 75%; }
+  main .large-10 {
+    flex-basis: 83.3333333333%; }
+  main .large-11 {
+    flex-basis: 91.6666666667%; }
+  main .large-12 {
+    flex-basis: 100%; } }
 /* end media query */
