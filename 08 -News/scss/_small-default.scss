@@ -48,6 +48,12 @@ header {
 div#navWrapper {background-color: $secondaryColor; border-top: 5px solid $primaryColor;}
 nav {
     
+    button {
+        margin: .2rem $gutter;
+        background-color: transparent;
+        border: none;
+    }
+
     ul li {
         float: left;
         //width: (100/4)*1%;
@@ -81,7 +87,7 @@ nav {
 
 
 /* ------------------------- main ------------------------- */
-div#mainWrapper {}
+//div#mainWrapper {}
 main {
     
     /*----- COLUMNS -----*/
