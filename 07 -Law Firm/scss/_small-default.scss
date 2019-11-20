@@ -16,15 +16,13 @@ body {
 header {
     
     height: 130px;
-    background-color: lighten($accent, 15%);
+    background-color: $secondaryColor;
     position: relative;
     
-    color: darken($secondaryColor, 40%);
+    color: $accent;
     padding: $gutter;
-//    border-bottom: 5px solid $accent;
+    border-bottom: 5px solid $accent;
     
-    figure.logo {position: absolute; bottom: $gutter; left: $gutter; top: $dblgutter;}
-    figure.logo img {width: 100%-$dblgutter; float: left; border-radius: $gutter; padding-right: $dblgutter;}
     
     form {float: right;}
     form input {
@@ -38,7 +36,7 @@ header {
     form input:focus {width: 8rem;}
     
     h1, h2 {
-        margin-left: 120px;
+        //margin-left: 120px;
     }
     
     h1 {
@@ -52,32 +50,7 @@ header {
         font-size: 1.2rem;
         font-weight: $normalWeight;
     }
-    
-    /* social icons */
-    ul.social {margin-left: 120px; margin-top: 5px;}
-    
-    ul.social li {
-        list-style-type: none;
-        float: left;
-        width: 25%;
-    }
-    
-    ul.social li a {
-        display: block;
-        margin: 0 auto;
-        background-image: url(../images/socialSprites.png);
-        height: 45px;
-        width: 45px;
-    }
-    
-    ul.social .twitter a {background-position: -90px -45px;}
-    ul.social .facebook a {background-position: -45px -45px;}
-    ul.social .youtube a {background-position: -225px -45px;}
-    
-    ul.social .twitter a:hover {background-position: -90px 0px;}
-    ul.social .facebook a:hover {background-position: -45px 0px;}
-    ul.social .youtube a:hover {background-position: -225px 0px;}
-    
+
     
 } // end header
 
@@ -87,11 +60,11 @@ nav {
     
     ul li {
         float: left;
-        width: 25%;
+        width: (100/6)*1%;
         border-right: 1px solid rgba(0,0,0,0.3);
         border-bottom: 1px solid rgba(0,0,0,0.3);
     }
-    ul li:last-child {border-right: 1px solid rgba(0,0,0,0.3);}
+    //ul li:last-child {border-right: 1px solid rgba(0,0,0,0.3);}
     ul li a {
         display: block;
         text-align: center;
@@ -121,25 +94,23 @@ nav {
 div#mainWrapper {}
 main {
     
-    article {margin: .5rem $gutter;}
-    article.lazyGallery figure {
-        width: 100%;
-        height: 0;
-        padding-bottom: 66%;
-    }
-    article.lazyGallery figure img {width: 100%;}
+    /*----- COLUMNS -----*/
+    
+    div.columnSet {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 1rem $gutter;
+    }// end parent
+    
+    // making the actual columns
+    @for $i from 1 through 12 {
+        $w:($i / 12) * 100%;
+        .small-#{$i} { flex-basis: $w; }
+    } // end loop
     
     figure.chair {
-        width: 33%-$gutter;
-        float: right;
-        
-        -webkit-clip-path: circle(50% at 50% 50%);
-        clip-path: circle(50% at 50% 50%);
-        
-        shape-outside: circle(50% at 50% 50%);
         margin: .25rem;
-        
-       // border: 1px solid $fontColor;
+        //border: 1px solid $fontColor;
     }
         
     figure.chair img {
@@ -171,15 +142,71 @@ main {
         color: $fontColor;
         margin: .75rem;
     }
+    a {
+        display: block;
+        text-align: center;
+        font-weight: $boldWeight;
+        padding: .5rem 0;
+        color: $accent;
+        text-decoration: none;
+    }
     
-    div.member article {
+    button {
+        background-color: $fontColor;
+        font-variant-caps: all-small-caps;
+        color: $secondaryColor;
+        padding-top: 5px;
+        padding-bottom: 8px;
+        padding-left: 18px;
+        padding-right: 18px;
+        margin-bottom: 10px;
+        margin-top: 5px;
+        border-radius: 10px;
+    }
+    
+    div.actionCall {
+        background-color: $primaryColor;
+        border: solid #FFF 5px;
+        margin: auto;
+        text-align: center;
+        
+    }
+    div.actionCall h3 {
+        font-variant-caps: all-small-caps;
+        color: $secondaryColor;
+        font-size: 2rem;
+        padding-top: .75rem;
+        padding-bottom: .75rem;
+    }
+    
+    div.blogPost {
+            
+    }
+    
+    div.blogPost article {
+        margin: .5rem $gutter;
+        width: 100%;
+        figure{ 
+            
+            img {height: 150px;}
+        }
+    }
+    
+    article.attorney {
         margin: .5rem $gutter;
         width: 100%-$dblgutter;
+        text-align: center;
+        background-color: $secondaryColor;
+        border: 1px solid $primaryColor;
+        figure {width: 100%; 
+            padding: 0;
+            margin: 0;
+        }
     }
     
     
     hr.fadeAway {
-        background: linear-gradient(to right, rgba(235,20,234,1) 0%,rgba(252,194,13,0) 100%);
+        background: linear-gradient(to right, rgba(29,93,133,1) 0%,rgba(29,93,133,0) 100%);
         height: 4px;
         border: none;
         margin: .5rem $gutter;
@@ -212,11 +239,21 @@ div#footerWrapper {
 
 footer {
     width: 100%;
+    border-top: 3px solid darken($fontColor, 15%);
     
+    div.icons {
+        text-align-last: center;
+        margin: 10px $gutter;
+    }
+    div.icons i {
+        color: $accent;
+        font-size: 2rem;
+        padding: 0 15px;
+    }
     
     p {
         text-align: center;
-        color: $fontColor;
+        color: darken($fontColor, 15%);
         padding: .75rem 0;
         font-size: .9rem;
     }

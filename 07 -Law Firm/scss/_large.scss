@@ -19,30 +19,22 @@ header {
 }
 
 nav {
-    ul li {width: 10rem;}
+    ul li {width: 5rem;}
     
 } // end nav
 
 main {
     
-//column layout
-    .row {clear: both;}
-    
-    .column {padding: 0 $gutter;}
-    
-    @for $i from 1 through 12 {
-        $w: ($i / 12) * 100%;
-        .large-#{i} {width: $w; float: left;}
-    }
-    
-    
-    
-    
-    article {margin: .5rem 15%;}
+    div.actionCall {
 
-    div.member article {
-        width: 25%-$dblgutter;
+        margin: 0;
     }
     
+    // making the actual columns
+    @for $i from 1 through 12 {
+        $w:($i / 12) * 100%;
+        .large-#{$i} { flex-basis: $w; }
+    } // end loop
+
    
 } // end main
