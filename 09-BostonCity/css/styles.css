@@ -64,11 +64,10 @@ body {
 
 /* ------------------------- header ------------------------- */
 header {
-  height: 140px;
-  background-color: #8cac0a;
-  color: #1D5D85;
+  background-color: #575851;
+  color: #3d0a0a;
   padding: 15px 2%;
-  border-bottom: 5px solid #1D5D85; }
+  border-bottom: 5px solid #10415f; }
   header form {
     float: right; }
   header form input {
@@ -80,14 +79,17 @@ header {
     transition: width .5s; }
   header form input:focus {
     width: 8rem; }
-  header figure.logo {
-    width: 110px; }
-    header figure.logo img {
-      width: 100%; }
+  header h1 {
+    font-size: 3.5rem;
+    font-weight: 400;
+    padding-top: 15px; }
+  header h2 {
+    font-size: 1.5rem;
+    font-weight: 400; }
 
 /* ------------------------- navigation ------------------------- */
 div#navWrapper {
-  background-color: #8cac0a;
+  background-color: #575851;
   border-top: 5px solid #617480; }
 
 nav button {
@@ -95,7 +97,7 @@ nav button {
   background-color: transparent;
   border: none;
   font-size: 1.2rem;
-  color: #1D5D85; }
+  color: #10415f; }
 nav ul {
   list-style-type: none;
   padding-left: 2%;
@@ -109,16 +111,16 @@ nav ul li a {
   display: block;
   font-weight: 700;
   padding: 0.8rem 2%;
-  color: #1D5D85;
+  color: #3d0a0a;
   text-decoration: none;
   border-top: 1px solid rgba(0, 0, 0, 0.3);
   transition: background 0.75s ease, color 0.75s ease; }
 nav ul li a:hover {
-  color: #b3dc0d;
+  color: #717369;
   background-color: #617480; }
 nav ul li.active a {
-  background-color: #516406;
-  color: #2b89c4; }
+  background-color: #30302c;
+  color: #1b6ea0; }
 
 /* ------------------------- main ------------------------- */
 main {
@@ -130,13 +132,6 @@ main {
     place-items: center stretch;
     place-content: center;
     align-content: stretch; }
-  main figure.mainStory {
-    margin: .5rem;
-    grid-column: 1 / span 2; }
-  main figure.mainStory img {
-    width: 100%; }
-  main figure.mainStory figcaption {
-    text-align: center; }
   main figure.story {
     margin: .25rem; }
   main figure.story img {
@@ -158,14 +153,14 @@ main {
     color: #353f46; }
   main p {
     line-height: 120%;
-    color: #343434;
+    color: #3d0a0a;
     margin: .75rem; }
   main a {
     display: block;
     text-align: center;
     font-weight: 700;
     padding: .5rem 0;
-    color: #1D5D85;
+    color: #10415f;
     text-decoration: none; }
   main hr.fadeAway {
     background: linear-gradient(to right, #1d5d85 0%, rgba(29, 93, 133, 0) 100%);
@@ -175,42 +170,25 @@ main {
 
 /* ------------------------- footer ------------------------- */
 div#footerWrapper {
-  background-color: #8cac0a;
-  border-top: 5px solid #1D5D85; }
+  background-color: #575851;
+  border-top: 5px solid #10415f; }
 
 footer {
-  width: 100%; }
+  width: 100%;
+  border-top: 3px solid #3d0a0a; }
   footer div.icons {
     text-align-last: center;
     margin: 10px 2%; }
   footer div.icons i {
-    color: #1D5D85;
+    color: #10415f;
     font-size: 2rem;
     padding: 0 15px; }
-  footer h2 {
-    font-size: 1.5rem;
-    padding-bottom: 10px;
-    color: #4b5a63; }
   footer p.foot {
     text-align: center;
-    color: #0e0e0e;
+    color: #3d0a0a;
     margin: 10px 2%;
     padding-bottom: 15px;
     font-size: 1.1rem; }
-  footer div.linkGrid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    place-items: center stretch;
-    place-content: center;
-    align-content: stretch; }
-  footer div.subLinks {
-    margin: .5rem; }
-  footer div.subLinks p {
-    margin-left: .5rem;
-    color: #0e0e0e;
-    padding-top: 5px;
-    font-size: 1.5rem;
-    text-align: left; }
 
 /* Stay open (don't collapse) */
 .stayopen:after {
@@ -232,7 +210,7 @@ footer {
     nav ul li {
       width: auto;
       float: left;
-      width: 25%;
+      width: 16.6666666667%;
       border-right: 1px solid rgba(0, 0, 0, 0.3);
       border-left: 1px solid rgba(0, 0, 0, 0.3); }
     nav ul li a {
@@ -256,13 +234,14 @@ footer {
     max-width: 80rem;
     margin: 0 auto; }
 
-  div#mainWrapper {
+  div#wrapper {
+    max-width: 75rem;
     margin: 0 auto;
     box-shadow: 0 0 10px #000;
     background-color: #FFF; }
 
   div#headerWrapper {
-    background-color: #1D5D85; }
+    background-color: #10415f; }
 
   main div.storyGrid {
     grid-template-columns: repeat(4, 1fr); }

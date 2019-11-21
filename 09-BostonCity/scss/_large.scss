@@ -3,8 +3,8 @@
 body {padding: 0; background-image: url(../images/sayagata-400px-pattern.png)}
 header, nav, main, footer {max-width: 80rem; margin: 0 auto;}
 
-div#mainWrapper {
-    //max-width: 75rem;
+div#wrapper {
+    max-width: 75rem;
     margin: 0 auto;
     box-shadow: 0 0 10px #000;
     background-color: #FFF;
