@@ -64,7 +64,7 @@ body {
 
 /* ------------------------- header ------------------------- */
 header {
-  height: 140px;
+  height: 130px;
   background-color: #8cac0a;
   color: #1D5D85;
   padding: 15px 2%;
@@ -94,24 +94,18 @@ nav button {
   margin: 0.2rem 2%;
   background-color: transparent;
   border: none;
-  font-size: 1.2rem;
-  color: #1D5D85; }
-nav ul {
-  list-style-type: none;
-  padding-left: 2%;
-  margin: 0;
-  border: none; }
-nav ul.hide {
-  display: none; }
+  font-size: 1.5rem; }
 nav ul li {
-  border: none; }
+  float: left;
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3); }
 nav ul li a {
   display: block;
+  text-align: center;
   font-weight: 700;
-  padding: 0.8rem 2%;
+  padding: .5rem 0;
   color: #1D5D85;
   text-decoration: none;
-  border-top: 1px solid rgba(0, 0, 0, 0.3);
   transition: background 0.75s ease, color 0.75s ease; }
 nav ul li a:hover {
   color: #b3dc0d;
@@ -223,20 +217,14 @@ footer {
   header {
     height: 145px; }
 
-  nav button {
-    display: none; }
-  nav ul.hide {
-    display: block; }
   nav ul {
-    padding-left: 0; }
-    nav ul li {
-      width: auto;
-      float: left;
-      width: 25%;
-      border-right: 1px solid rgba(0, 0, 0, 0.3);
-      border-left: 1px solid rgba(0, 0, 0, 0.3); }
-    nav ul li a {
-      text-align: center; }
+    border-left: 1px solid rgba(0, 0, 0, 0.3); }
+    nav ul ul li {
+      width: auto; }
+    nav ul ul li a {
+      padding: .5rem .5rem; }
+  nav ul li {
+    width: 7rem; }
 
   main div.storyGrid {
     grid-template-columns: repeat(3, 1fr); }
@@ -273,3 +261,5 @@ footer {
   footer div.linkGrid {
     grid-template-columns: repeat(4, 1fr); } }
 /* end media query */
+
+/*# sourceMappingURL=styles.css.map */

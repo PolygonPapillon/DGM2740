@@ -15,7 +15,7 @@ body {
 /* ------------------------- header ------------------------- */
 header {
     
-    height: 130px;
+    height: 140px;
     background-color: $secondaryColor;
     //position: relative;
     
@@ -52,22 +52,34 @@ nav {
         margin: .2rem $gutter;
         background-color: transparent;
         border: none;
+        font-size: 1.2rem;
+        color: $accent;
     }
 
+    ul {
+        list-style-type: none;
+        padding-left: $gutter;
+        margin: 0;
+        border: none;
+    }
+    ul.hide {display: none;}
     ul li {
-        float: left;
+        border: none;
+        //float: left;
         //width: (100/4)*1%;
-        border-right: 1px solid rgba(0,0,0,0.3);
-        border-bottom: 1px solid rgba(0,0,0,0.3);
+        //border-right: 1px solid rgba(0,0,0,0.3);
+        //border-bottom: 1px solid rgba(0,0,0,0.3);
     }
     //ul li:last-child {border-right: 1px solid rgba(0,0,0,0.3);}
     ul li a {
         display: block;
-        text-align: center;
+        //text-align: center;
         font-weight: $boldWeight;
-        padding: .5rem 0;
+        //padding: .5rem 0;
+        padding: .8rem $gutter;
         color: $accent;
         text-decoration: none;
+        border-top: 1px solid rgba(0,0,0,0.3);
         transition: background 0.75s ease, color 0.75s ease;
     }
     

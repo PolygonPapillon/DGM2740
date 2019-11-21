@@ -1,155 +1,172 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+    <!-- don't lie!!! -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
 
-<!-- don't lie!!! -->
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
-<meta charset="utf-8">
-<title>Pawsome News: Politics</title>
-    <link href="css/styles.css" rel="stylesheet">
+    <meta charset="utf-8" />
+    <title>Pawsome News: Politics</title>
+    <link href="css/styles.css" rel="stylesheet" />
 
-<!-- font -->
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel="stylesheet"> 
-<!-- this is the link to the older version that does NOT require an account.-->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
-    
-</head>
-<div id="wrapper">
-<body>
+    <!-- font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700"
+      rel="stylesheet"
+    />
+    <!-- this is the link to the older version that does NOT require an account.-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
+      integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+      crossorigin="anonymous"
+    />
+  </head>
+  <div id="wrapper">
+    <body>
+      <!-- header -->
+      <div id="headerWrapper" class="stayopen">
+        <header class="stayopen">
+          <form><input type="text" placeholder="search site" /></form>
+          <figure class="logo">
+            <img src="images/logo.png" alt="news logo" />
+          </figure>
+        </header>
+      </div>
 
-<!-- header -->
-    <div id="headerWrapper" class="stayopen">
-    <header class="stayopen">
-        
-        <form><input type="text" placeholder="search site"></form>
-        <figure class="logo">
-            <img src="images/logo.png" alt="news logo">
-        </figure>
-        
-    </header>
-    </div>
-        
-<!-- navigation -->
-    <div id="navWrapper">
-    <nav>
-        
-        <button>
-            &#9776;
-        </button>
-        
-        <ul class="stayopen">
+      <!-- navigation -->
+      <div id="navWrapper">
+        <nav class="stayopen">
+          <button onclick="toggleMenu()">
+            <p>&#9776; Menu</p>
+          </button>
+
+          <div>
+          <ul id="smallNav" class="hide">
             <li><a href="index.html">Home</a></li>
             <li><a href="index.html">Opinion</a></li>
             <li class="active"><a href="index.html">Politics</a></li>
-            <li><a href="index.html">Business</a></li>            
-        </ul>
-    </nav>
-        
-    </div>    
-    
-    
-<!-- page content -->
-    <div id="mainWrapper">
-    <main class="stayopen">  
-        
-     <div class="storyGrid">  
-        <figure class="mainStory">
-            <img src="images/blog4.png" alt="picture for main story">
-            <figcaption><h3>Is lipstick safe to eat? and 6 other questions you never thought to ask - but should have</h3></figcaption>
-        </figure>
+            <li><a href="index.html">Business</a></li>
+          </ul>
+        </div>
+        </nav>
+      </div>
 
-        
-        <figure class="story">
-            <img src="images/blog2.png" alt="picture for story 2">
-            <figcaption><h3>The hypnotic effect of modern buildings</h3></figcaption>
-        </figure>
+      <!-- page content -->
+      <div id="mainWrapper">
+        <main class="stayopen">
+          <div class="storyGrid">
+            <figure class="mainStory">
+              <img src="images/blog4.png" alt="picture for main story" />
+              <figcaption>
+                <h3>
+                  Is lipstick safe to eat? and 6 other questions you never
+                  thought to ask - but should have
+                </h3>
+              </figcaption>
+            </figure>
 
-        
-        <figure class="story">
-            <img src="images/blog3.png" alt="picture for story 3">
-            <figcaption><h3>Beautiful but toxic - get the truth</h3></figcaption>
-        </figure>
+            <figure class="story">
+              <img src="images/blog2.png" alt="picture for story 2" />
+              <figcaption>
+                <h3>The hypnotic effect of modern buildings</h3>
+              </figcaption>
+            </figure>
 
-        
-        <figure class="story">
-            <img src="images/blog1.png" alt="picture for story 4">
-            <figcaption><h3>Why are these lights making people so high that they pass out?</h3></figcaption>
-        </figure>
+            <figure class="story">
+              <img src="images/blog3.png" alt="picture for story 3" />
+              <figcaption>
+                <h3>Beautiful but toxic - get the truth</h3>
+              </figcaption>
+            </figure>
 
-                
-        <figure class="story">
-            <img src="images/Brandon.png" alt="picture of story 5">
-            <figcaption><h3>Brandon Folding reporting on the state of recent chairs</h3></figcaption>
-        </figure>
+            <figure class="story">
+              <img src="images/blog1.png" alt="picture for story 4" />
+              <figcaption>
+                <h3>
+                  Why are these lights making people so high that they pass out?
+                </h3>
+              </figcaption>
+            </figure>
 
-                
-        <figure class="story">
-            <img src="images/nick.png" alt="picture of story 6">
-            <figcaption><h3>Nick Gaming reporting on games in schools</h3></figcaption>
-        </figure>
+            <figure class="story">
+              <img src="images/Brandon.png" alt="picture of story 5" />
+              <figcaption>
+                <h3>Brandon Folding reporting on the state of recent chairs</h3>
+              </figcaption>
+            </figure>
 
-                
-        <figure class="story">
-            <img src="images/TJ.png" alt="picture of story 7">
-            <figcaption><h3>TJ Barstool reporting on the effects of alcohol on wood</h3></figcaption>
-        </figure>
-    </div> <!-- end storyGrid -->
-        
-    </main>
-    </div> <!-- end mainWrapper -->
-    
-<!-- footer -->
-    <div id="footerWrapper">
-    <footer class="stayOpen">
-        
-        <!-- Social media icons -->
-        <div class="icons">
+            <figure class="story">
+              <img src="images/nick.png" alt="picture of story 6" />
+              <figcaption>
+                <h3>Nick Gaming reporting on games in schools</h3>
+              </figcaption>
+            </figure>
+
+            <figure class="story">
+              <img src="images/TJ.png" alt="picture of story 7" />
+              <figcaption>
+                <h3>TJ Barstool reporting on the effects of alcohol on wood</h3>
+              </figcaption>
+            </figure>
+          </div>
+          <!-- end storyGrid -->
+        </main>
+      </div>
+      <!-- end mainWrapper -->
+
+      <!-- footer -->
+      <div id="footerWrapper">
+        <footer class="stayOpen">
+          <!-- Social media icons -->
+          <div class="icons">
             <i class="fab fa-twitter"></i>
             <i class="fab fa-facebook"></i>
             <i class="fab fa-pinterest"></i>
             <i class="fab fa-deviantart"></i>
-        </div>
-        
-        <div class="linkGrid">
-            <div class="subLinks">
-            <h2>SECTIONS</h2>
-                <p>Home</p>
-                <p>Video</p>
-                <p>Opinion</p>
-                <p>Entertainment</p>
-                <p>Health</p>
-            </div>    
-            <div class="subLinks">
-            <h2>SHOWS</h2>
-                <p>Happenings</p>
-                <p>Sunday AM</p>
-                <p>Newsroom</p>
-                <p>World</p>
-            </div>    
-            <div class="subLinks">
-            <h2>TOOLS</h2>
-                <p>Jobs</p>
-                <p>Privacy Policy</p>
-                <p>Contact Us</p>
-                <p>Media Relations</p>
-            </div>
-            <div class="subLinks">
-            <h2>PERSONALITIES</h2>
-                <p>Jim Johnson</p>
-                <p>All Avery</p>
-                <p>Bill Banton</p>
-                <p>Charlie Christensen</p>
-                <p>Dave Dingilmire</p>
-            </div>
-            </div>
-        
-        <p class="foot">&#9679; &copy; 2019 Purple Chairs &#9679; Login &#9679;</p>
-     
-    </footer>
-    </div>
+          </div>
 
-    
-</body>
-    </div>
+          <div class="linkGrid">
+            <div class="subLinks">
+              <h2>SECTIONS</h2>
+              <p>Home</p>
+              <p>Video</p>
+              <p>Opinion</p>
+              <p>Entertainment</p>
+              <p>Health</p>
+            </div>
+            <div class="subLinks">
+              <h2>SHOWS</h2>
+              <p>Happenings</p>
+              <p>Sunday AM</p>
+              <p>Newsroom</p>
+              <p>World</p>
+            </div>
+            <div class="subLinks">
+              <h2>TOOLS</h2>
+              <p>Jobs</p>
+              <p>Privacy Policy</p>
+              <p>Contact Us</p>
+              <p>Media Relations</p>
+            </div>
+            <div class="subLinks">
+              <h2>PERSONALITIES</h2>
+              <p>Jim Johnson</p>
+              <p>All Avery</p>
+              <p>Bill Banton</p>
+              <p>Charlie Christensen</p>
+              <p>Dave Dingilmire</p>
+            </div>
+          </div>
+
+          <p class="foot">
+            &#9679; &copy; 2019 Purple Chairs &#9679; Login &#9679;
+          </p>
+        </footer>
+      </div>
+      <script async src="/08 -News/js/scripts.js"></script>
+    </body>
+  </div>
 </html>
