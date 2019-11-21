@@ -1,0 +1,43 @@
+header {
+  //position: relative;
+
+  height: 145px;
+}
+
+nav {
+  button {
+    display: none;
+  }
+  ul.hide {
+    display: block;
+  }
+  ul {
+    padding-left: 0;
+    li {
+      width: auto;
+      float: left;
+      width: (100/4) * 1%;
+      border-right: 1px solid rgba(0, 0, 0, 0.3);
+      border-left: 1px solid rgba(0, 0, 0, 0.3);
+    }
+    li a {
+      text-align: center;
+    }
+  }
+}
+
+main {
+  div.storyGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  figure.mainStory {
+    grid-column: 1 / span 3;
+  }
+}
+
+footer {
+  div.linkGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
