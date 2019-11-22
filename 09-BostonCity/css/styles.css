@@ -70,15 +70,15 @@ header {
   border-bottom: 5px solid #10415f; }
   header form {
     float: right; }
-  header form input {
-    width: 6rem;
-    border-radius: 10px;
-    margin-right: 2%;
-    padding: .2rem;
-    border: none;
-    transition: width .5s; }
-  header form input:focus {
-    width: 8rem; }
+    header form input {
+      width: 6rem;
+      border-radius: 10px;
+      margin-right: 2%;
+      padding: 0.2rem;
+      border: none;
+      transition: width 0.5s; }
+    header form input:focus {
+      width: 8rem; }
   header h1 {
     font-size: 3.5rem;
     font-weight: 400;
@@ -125,7 +125,7 @@ nav ul li.active a {
 /* ------------------------- main ------------------------- */
 main {
   /*----- COLUMNS -----*/
-  background-color: #FFF; }
+  background-color: #fff; }
   main div.storyGrid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -133,7 +133,7 @@ main {
     place-content: center;
     align-content: stretch; }
   main figure.story {
-    margin: .25rem; }
+    margin: 0.25rem; }
   main figure.story img {
     width: 100%;
     object-fit: contain; }
@@ -154,12 +154,12 @@ main {
   main p {
     line-height: 120%;
     color: #3d0a0a;
-    margin: .75rem; }
+    margin: 0.75rem; }
   main a {
     display: block;
     text-align: center;
     font-weight: 700;
-    padding: .5rem 0;
+    padding: 0.5rem 0;
     color: #10415f;
     text-decoration: none; }
   main hr.fadeAway {
