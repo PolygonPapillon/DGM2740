@@ -93,7 +93,7 @@ nav {
 
 
 /* ------------------------- main ------------------------- */
-div#mainWrapper {}
+//div#mainWrapper {}
 main {
 
     background-color: #FFF;
@@ -101,7 +101,7 @@ main {
     
     h1 {
         font-size: 2rem;
-        margin: 1rem 0 0 $gutter;
+        padding: 1rem 0 0 $gutter;
         color: $primaryColor;
     }
     h2 {
@@ -124,6 +124,7 @@ main {
     div.events article {
         margin: 1rem $gutter;
         width: 100%-$gutter;
+        background-color: #FFF;
     }
     
     hr.fadeAway {
