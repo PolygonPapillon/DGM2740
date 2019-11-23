@@ -136,13 +136,12 @@ main {
     margin: 0.75rem 0 0 2%;
     color: #0a9a53; }
   main h3 {
-    font-size: 1.2rem;
-    margin: 0.2rem 2%;
-    color: #839c21; }
+    font-size: 1.3rem;
+    color: #839c21;
+    padding-bottom: 10px; }
   main p {
-    line-height: 120%;
-    color: #1418D9;
-    margin: 0 .5rem; }
+    line-height: 130%;
+    color: #1418D9; }
   main div.events article {
     margin: 1rem 2%;
     width: 98%;

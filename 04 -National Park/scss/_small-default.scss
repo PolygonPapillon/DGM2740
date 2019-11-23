@@ -110,15 +110,16 @@ main {
         color: lighten($primaryColor, 10%);
     }
     h3 {
-       font-size: 1.2rem;
-        margin: .2rem $gutter;
-        color: darken($accent, 20%); 
+       font-size: 1.3rem;
+        //margin: .2rem $gutter;
+        color: darken($accent, 20%);
+        padding-bottom: 10px; 
     }
 
     p {
-        line-height: 120%;
+        line-height: 130%;
         color: $fontColor;
-        margin: 0 .5rem;
+        //margin: 0 .5rem;
     }
     
     div.events article {
