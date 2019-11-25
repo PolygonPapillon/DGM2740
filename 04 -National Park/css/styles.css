@@ -151,7 +151,21 @@ main {
     height: 4px;
     border: none;
     margin: 0.5rem 2%; }
-
+  main i {
+    position: relative;
+    left: 40px;
+    top: 40px;
+    animation: sunMoves 5s 1; }
+@keyframes sunMoves {
+  0% {
+    transform: translate(40px, 40px);
+    rotate: 0deg; }
+  50% {
+    transform: translate(400px, 10px);
+    rotate: 360deg; }
+  100% {
+    transform: translate(800px, 40px);
+    rotate: 720deg; } }
 /* ------------------------- footer ------------------------- */
 div#footerWrapper {
   background-color: #076A39;
