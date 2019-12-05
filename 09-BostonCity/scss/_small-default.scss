@@ -103,7 +103,7 @@ nav {
   }
   ul li.active a {
     background-color: darken($secondaryColor, 15%);
-    color: lighten($accent, 15%);
+    color: lighten($accent, 5%);
   }
 } //end nav
 
