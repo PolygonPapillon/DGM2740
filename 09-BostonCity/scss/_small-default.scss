@@ -113,13 +113,25 @@ main {
   background-color: #fff;
   /*----- COLUMNS -----*/
 
-picture {
-  position: relative;
-}
-picture div {
-  position: relative;
-  bottom: 0;
-}
+  picture {
+    position: relative;
+  }
+  picture div {
+    position: relative;
+    bottom: 0;
+    text-align: center;
+  }
+
+  hr.fadeAway {
+    background: linear-gradient(
+      to right,
+      rgba(29, 93, 133, 1) 0%,
+      rgba(29, 93, 133, 0) 100%
+    );
+    height: 4px;
+    border: none;
+    margin: 0.5rem $gutter;
+  }
 
   div.visitGrid {
     display: grid;
@@ -133,34 +145,43 @@ picture div {
 
   div.card {
     margin: 25px 0;
+    border: none;
+    background: none;
+    background-color: none;
   }
 
+
+  
   div.card:nth-child(1) {
-    background-image: url("../images/loews-hotel.jpg");
+    background-image: url("../images/loews-hotelL.jpg");
+    background-repeat: no-repeat;
   }
-  div.card:nth-child(1) a.text {
+  div.card:nth-child(1) a.words {
     background-color: $accent;
   }
   div.card:nth-child(2) {
-    background-image: url("../images/freedom-trail.jpg");
+    background-image: url("../images/freedom-trailL.jpg");
+    background-repeat: no-repeat;
   }
-  div.card:nth-child(2) a.text {
+  div.card:nth-child(2) a.words {
     background-color: $accent;
   }
   div.card:nth-child(3) {
-    background-image: url("../images/city-pass-boston.jpg");
+    background-image: url("../images/city-pass-bostonL.jpg");
+    background-repeat: no-repeat;
   }
-  div.card:nth-child(3) a.text {
+  div.card:nth-child(3) a.words {
     background-color: $accent;
   }
   div.card:nth-child(4) {
-    background-image: url("../images/parker-house.jpg");
+    background-image: url("../images/parker-houseL.jpg");
+    background-repeat: no-repeat;
   }
-  div.card:nth-child(4) a.text {
+  div.card:nth-child(4) a.words {
     background-color: $accent;
   }
 
-  div.card a.text {
+  div.card a.words {
     display: block;
     width: 100%;
     height: 250px;
@@ -171,14 +192,15 @@ picture div {
     transition: all 0.5s ease-in;
   }
 
-  div.card a.text i {
+  div.card a.words i {
     color: $primaryColor;
     font-size: 2rem;
   }
 
-  a.text:hover {
+  a.words:hover {
     background: none;
     background-color: none;
+    border: none;
     text-shadow: 0 0 4px black;
     color: lighten($secondaryColor, 10%);
     transition: all 0.5s ease-in;
@@ -214,16 +236,7 @@ picture div {
     text-decoration: none;
   } */
 
-  hr.fadeAway {
-    background: linear-gradient(
-      to right,
-      rgba(29, 93, 133, 1) 0%,
-      rgba(29, 93, 133, 0) 100%
-    );
-    height: 4px;
-    border: none;
-    margin: 0.5rem $gutter;
-  }
+  
 } // end main
 
 /* ------------------------- footer ------------------------- */
