@@ -10,6 +10,8 @@
     <meta charset="utf-8" />
     <title>Boston City Tours: Visit</title>
     <link href="css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text.css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text.css" href="slick/slick-theme.css" />
 
     <!-- font -->
     <link
@@ -59,7 +61,7 @@
       <!-- page content -->
       <div id="mainWrapper">
         <main class="stayopen">
-          <div>
+          <div class="my_slider">
             <!-- slider images -->
             <picture>
               <source
@@ -70,7 +72,10 @@
                 srcset="images/slider-images/founders-memorial-bostonL.jpg"
                 media="(min-width: 28.12rem)"
               />
-              <img src="images/source-images/800-founders-memorial-boston-common-20x11.jpg" alt="slider" />
+              <img
+                src="images/source-images/800-founders-memorial-boston-common-20x11.jpg"
+                alt="slider"
+              />
               <div>Founders Memorial</div>
             </picture>
             <picture>
@@ -82,7 +87,10 @@
                 srcset="images/slider-images/faneuil-hall-illustrationL.jpg"
                 media="(min-width: 28.12rem)"
               />
-              <img src="images/source-images/faneuil-hall-illustration.jpg" alt="slider" />
+              <img
+                src="images/source-images/faneuil-hall-illustration.jpg"
+                alt="slider"
+              />
               <div>Faneuil Hall Illustration</div>
             </picture>
             <picture>
@@ -94,7 +102,10 @@
                 srcset="images/slider-images/paul-revere-houseL.jpg"
                 media="(min-width: 28.12rem)"
               />
-              <img src="images/source-images/historic-site-paul-revere-house.jpg" alt="slider" />
+              <img
+                src="images/source-images/historic-site-paul-revere-house.jpg"
+                alt="slider"
+              />
               <div>Paul Revere House</div>
             </picture>
             <picture>
@@ -106,33 +117,42 @@
                 srcset="images/slider-images/historic-boston-public-libraryL.jpg"
                 media="(min-width: 28.12rem)"
               />
-              <img src="images/source-images/historic-boston-public-library.jpg" alt="slider" />
+              <img
+                src="images/source-images/historic-boston-public-library.jpg"
+                alt="slider"
+              />
               <div>Historic Boston Public Library</div>
             </picture>
             <picture>
-                <source
-                  srcset="images/slider-images/Old_State_House_Boston.jpg"
-                  media="(max-width: 28.12rem)"
-                />
-                <source
-                  srcset="images/slider-images/Old_State_House_BostonL.jpg"
-                  media="(min-width: 28.12rem)"
-                />
-                <img src="images/source-images/Old_State_House_Boston_2009f.jpg" alt="slider" />
-                <div>Old State House</div>
-              </picture>
-              <picture>
-                  <source
-                    srcset="images/slider-images/history-of-boston-cityscape.jpg"
-                    media="(max-width: 28.12rem)"
-                  />
-                  <source
-                    srcset="images/slider-images/history-of-boston-cityscapeL.jpg"
-                    media="(min-width: 28.12rem)"
-                  />
-                  <img src="images/source-images/history-of-boston-cityscape.jpg" alt="slider" />
-                  <div>Boston Cityscape</div>
-                </picture>
+              <source
+                srcset="images/slider-images/Old_State_House_Boston.jpg"
+                media="(max-width: 28.12rem)"
+              />
+              <source
+                srcset="images/slider-images/Old_State_House_BostonL.jpg"
+                media="(min-width: 28.12rem)"
+              />
+              <img
+                src="images/source-images/Old_State_House_Boston_2009f.jpg"
+                alt="slider"
+              />
+              <div>Old State House</div>
+            </picture>
+            <picture>
+              <source
+                srcset="images/slider-images/history-of-boston-cityscape.jpg"
+                media="(max-width: 28.12rem)"
+              />
+              <source
+                srcset="images/slider-images/history-of-boston-cityscapeL.jpg"
+                media="(min-width: 28.12rem)"
+              />
+              <img
+                src="images/source-images/history-of-boston-cityscape.jpg"
+                alt="slider"
+              />
+              <div>Boston Cityscape</div>
+            </picture>
           </div>
 
           <hr class="fadeAway" />
@@ -189,6 +209,25 @@
         </footer>
       </div>
       <script async src="/js/scripts.js"></script>
+      <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"
+      ></script>
+      <script>
+        $(document).ready(function() {
+          $(".my_slider").slick({
+            dots: true,
+            arrows: false,
+            infinite: true,
+            speed: 1000,
+            cssEase: 'ease-out',
+            autoplay: true,
+            autoplaySpeed: 30000
+          });
+        });
+      </script>
+      <script type="text/javascript" src="slick/slick.min.js"></script>
     </div>
   </body>
 </html>

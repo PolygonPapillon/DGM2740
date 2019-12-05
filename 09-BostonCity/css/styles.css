@@ -57,7 +57,11 @@ nav ul li a:hover { color: #abaca5; background-color: #617480; }
 nav ul li.active a { background-color: #6c6d64; color: #145075; }
 
 /* ------------------------- main ------------------------- */
-main { /*----- COLUMNS -----*/ background-color: #fff; /*  a { display: block; text-align: center; font-weight: $boldWeight; padding: 0.5rem 0; color: $accent; text-decoration: none; } */ }
+main { background-color: #fff; /*----- COLUMNS -----*/ /*  a { display: block; text-align: center; font-weight: $boldWeight; padding: 0.5rem 0; color: $accent; text-decoration: none; } */ }
+
+main picture { position: relative; }
+
+main picture div { position: relative; bottom: 0; }
 
 main div.visitGrid { display: -ms-grid; display: grid; -ms-grid-columns: (1fr)[2]; grid-template-columns: repeat(2, 1fr); place-items: center stretch; place-content: center; -ms-flex-line-pack: stretch; align-content: stretch; margin: 0 2%; gap: 8px; }
 
@@ -65,25 +69,25 @@ main div.card { margin: 25px 0; }
 
 main div.card:nth-child(1) { background-image: url("../images/loews-hotel.jpg"); }
 
-main div.card:nth-child(1) a { background-color: #10415f; }
+main div.card:nth-child(1) a.text { background-color: #10415f; }
 
 main div.card:nth-child(2) { background-image: url("../images/freedom-trail.jpg"); }
 
-main div.card:nth-child(2) a { background-color: #10415f; }
+main div.card:nth-child(2) a.text { background-color: #10415f; }
 
 main div.card:nth-child(3) { background-image: url("../images/city-pass-boston.jpg"); }
 
-main div.card:nth-child(3) a { background-color: #10415f; }
+main div.card:nth-child(3) a.text { background-color: #10415f; }
 
 main div.card:nth-child(4) { background-image: url("../images/parker-house.jpg"); }
 
-main div.card:nth-child(4) a { background-color: #10415f; }
+main div.card:nth-child(4) a.text { background-color: #10415f; }
 
-main div.card a.text { display: block; width: 100%; height: 250px; padding: 30px 2%; text-decoration: none; text-align: center; font-size: 2rem; -webkit-transition: all .5s ease-in; transition: all .5s ease-in; }
-
-main .text:hover { background: none; text-shadow: 0 0 4px black; color: #abaca5; background-color: #617480; }
+main div.card a.text { display: block; width: 100%; height: 250px; padding: 30px 2%; text-decoration: none; text-align: center; font-size: 2rem; -webkit-transition: all 0.5s ease-in; transition: all 0.5s ease-in; }
 
 main div.card a.text i { color: #617480; font-size: 2rem; }
+
+main a.text:hover { background: none; background-color: none; text-shadow: 0 0 4px black; color: #abaca5; -webkit-transition: all 0.5s ease-in; transition: all 0.5s ease-in; }
 
 main h1 { font-size: 2rem; margin: 1rem 0 0 2%; color: #617480; }
 

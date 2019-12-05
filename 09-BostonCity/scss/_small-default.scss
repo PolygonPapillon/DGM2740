@@ -110,7 +110,16 @@ nav {
 /* ------------------------- main ------------------------- */
 //div#mainWrapper {}
 main {
+  background-color: #fff;
   /*----- COLUMNS -----*/
+
+picture {
+  position: relative;
+}
+picture div {
+  position: relative;
+  bottom: 0;
+}
 
   div.visitGrid {
     display: grid;
@@ -129,29 +138,27 @@ main {
   div.card:nth-child(1) {
     background-image: url("../images/loews-hotel.jpg");
   }
-  div.card:nth-child(1) a {
+  div.card:nth-child(1) a.text {
     background-color: $accent;
   }
   div.card:nth-child(2) {
     background-image: url("../images/freedom-trail.jpg");
   }
-  div.card:nth-child(2) a {
+  div.card:nth-child(2) a.text {
     background-color: $accent;
   }
   div.card:nth-child(3) {
     background-image: url("../images/city-pass-boston.jpg");
   }
-  div.card:nth-child(3) a {
+  div.card:nth-child(3) a.text {
     background-color: $accent;
   }
   div.card:nth-child(4) {
     background-image: url("../images/parker-house.jpg");
   }
-  div.card:nth-child(4) a {
+  div.card:nth-child(4) a.text {
     background-color: $accent;
   }
-
-
 
   div.card a.text {
     display: block;
@@ -161,14 +168,7 @@ main {
     text-decoration: none;
     text-align: center;
     font-size: 2rem;
-    transition: all .5s ease-in;
-    
-  }
-  .text:hover {
-    background: none;
-    text-shadow: 0 0 4px black;
-    color: lighten($secondaryColor, 10%);
-    background-color: $primaryColor;
+    transition: all 0.5s ease-in;
   }
 
   div.card a.text i {
@@ -176,7 +176,13 @@ main {
     font-size: 2rem;
   }
 
-  background-color: #fff;
+  a.text:hover {
+    background: none;
+    background-color: none;
+    text-shadow: 0 0 4px black;
+    color: lighten($secondaryColor, 10%);
+    transition: all 0.5s ease-in;
+  }
 
   h1 {
     font-size: 2rem;
@@ -199,7 +205,7 @@ main {
     color: $fontColor;
     margin: 0.75rem;
   }
- /*  a {
+  /*  a {
     display: block;
     text-align: center;
     font-weight: $boldWeight;
