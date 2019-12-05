@@ -27,17 +27,9 @@ nav {
 }
 
 main {
-  div.storyGrid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  figure.mainStory {
-    grid-column: 1 / span 3;
-  }
-}
-
-footer {
-  div.linkGrid {
+  div.visitGrid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+// footer {} // end footer

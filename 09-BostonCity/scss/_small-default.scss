@@ -112,27 +112,66 @@ nav {
 main {
   /*----- COLUMNS -----*/
 
-  div.storyGrid {
+  div.visitGrid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     place-items: center stretch;
     place-content: center;
     align-content: stretch;
+    margin: 0 $gutter;
+    gap: 8px;
   }
 
-  figure.story {
-    margin: 0.25rem;
-    //max-height: 225px;
-    //border: 1px solid $fontColor;
+  div.card {
+    margin: 25px 0;
   }
 
-  figure.story img {
+  div.card:nth-child(1) {
+    background-image: url("../images/loews-hotelL.jpg");
+  }
+  div.card:nth-child(1) a {
+    background-color: $accent;
+  }
+  div.card:nth-child(2) {
+    background-image: url("../images/freedom-trailL.jpg");
+  }
+  div.card:nth-child(2) a {
+    background-color: $accent;
+  }
+  div.card:nth-child(3) {
+    background-image: url("../images/city-pass-bostonL.jpg");
+  }
+  div.card:nth-child(3) a {
+    background-color: $accent;
+  }
+  div.card:nth-child(4) {
+    background-image: url("../images/parker-houseL.jpg");
+  }
+  div.card:nth-child(4) a {
+    background-color: $accent;
+  }
+
+
+
+  div.card a.text {
+    display: block;
     width: 100%;
-    object-fit: contain;
+    height: 250px;
+    padding: 20px $gutter;
+    text-decoration: none;
+    text-align: center;
+    font-size: 2rem;
+    transition: all .5s ease-in;
+    
+  }
+  .text:hover {
+    background: none;
+    text-shadow: 0 0 4px black;
   }
 
-  figure.story figcaption {
-    text-align: center;
+  div.card a.text i {
+    color: $primaryColor;
+    
   }
 
   background-color: #fff;
@@ -158,14 +197,14 @@ main {
     color: $fontColor;
     margin: 0.75rem;
   }
-  a {
+ /*  a {
     display: block;
     text-align: center;
     font-weight: $boldWeight;
     padding: 0.5rem 0;
     color: $accent;
     text-decoration: none;
-  }
+  } */
 
   hr.fadeAway {
     background: linear-gradient(

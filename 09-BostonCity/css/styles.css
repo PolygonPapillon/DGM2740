@@ -57,15 +57,33 @@ nav ul li a:hover { color: #abaca5; background-color: #617480; }
 nav ul li.active a { background-color: #6c6d64; color: #145075; }
 
 /* ------------------------- main ------------------------- */
-main { /*----- COLUMNS -----*/ background-color: #fff; }
+main { /*----- COLUMNS -----*/ background-color: #fff; /*  a { display: block; text-align: center; font-weight: $boldWeight; padding: 0.5rem 0; color: $accent; text-decoration: none; } */ }
 
-main div.storyGrid { display: -ms-grid; display: grid; -ms-grid-columns: (1fr)[2]; grid-template-columns: repeat(2, 1fr); place-items: center stretch; place-content: center; -ms-flex-line-pack: stretch; align-content: stretch; }
+main div.visitGrid { display: -ms-grid; display: grid; -ms-grid-columns: (1fr)[2]; grid-template-columns: repeat(2, 1fr); place-items: center stretch; place-content: center; -ms-flex-line-pack: stretch; align-content: stretch; margin: 0 2%; gap: 8px; }
 
-main figure.story { margin: 0.25rem; }
+main div.card { margin: 25px 0; }
 
-main figure.story img { width: 100%; -o-object-fit: contain; object-fit: contain; }
+main div.card:nth-child(1) { background-image: url("../images/loews-hotelL.jpg"); }
 
-main figure.story figcaption { text-align: center; }
+main div.card:nth-child(1) a { background-color: #10415f; }
+
+main div.card:nth-child(2) { background-image: url("../images/freedom-trailL.jpg"); }
+
+main div.card:nth-child(2) a { background-color: #10415f; }
+
+main div.card:nth-child(3) { background-image: url("../images/city-pass-bostonL.jpg"); }
+
+main div.card:nth-child(3) a { background-color: #10415f; }
+
+main div.card:nth-child(4) { background-image: url("../images/parker-houseL.jpg"); }
+
+main div.card:nth-child(4) a { background-color: #10415f; }
+
+main div.card a.text { display: block; width: 100%; height: 250px; padding: 20px 2%; text-decoration: none; text-align: center; font-size: 2rem; -webkit-transition: all .5s ease-in; transition: all .5s ease-in; }
+
+main .text:hover { background: none; text-shadow: 0 0 4px black; }
+
+main div.card a.text i { color: #617480; }
 
 main h1 { font-size: 2rem; margin: 1rem 0 0 2%; color: #617480; }
 
@@ -74,8 +92,6 @@ main h2 { font-size: 1.5rem; margin: 0.75rem 0 0 2%; color: #7a8e9a; }
 main h3 { font-size: 1.2rem; margin: 0.5rem 2%; color: #353f46; }
 
 main p { line-height: 120%; color: #3d0a0a; margin: 0.75rem; }
-
-main a { display: block; text-align: center; font-weight: 700; padding: 0.5rem 0; color: #10415f; text-decoration: none; }
 
 main hr.fadeAway { background: -webkit-gradient(linear, left top, right top, from(#1d5d85), to(rgba(29, 93, 133, 0))); background: linear-gradient(to right, #1d5d85 0%, rgba(29, 93, 133, 0) 100%); height: 4px; border: none; margin: 0.5rem 2%; }
 
@@ -100,18 +116,14 @@ footer p.foot { text-align: center; color: #3d0a0a; margin: 10px 2%; padding-bot
   nav ul { padding-left: 0; }
   nav ul li { width: auto; float: left; width: 16.66667%; border-right: 1px solid rgba(0, 0, 0, 0.3); border-left: 1px solid rgba(0, 0, 0, 0.3); }
   nav ul li a { text-align: center; }
-  main div.storyGrid { -ms-grid-columns: (1fr)[3]; grid-template-columns: repeat(3, 1fr); }
-  main figure.mainStory { -ms-grid-column: 1; -ms-grid-column-span: 3; grid-column: 1 / span 3; }
-  footer div.linkGrid { -ms-grid-columns: (1fr)[2]; grid-template-columns: repeat(2, 1fr); } }
+  main div.visitGrid { -ms-grid-columns: (1fr)[2]; grid-template-columns: repeat(2, 1fr); } }
 
 /* end media query */
 /* media query */
 @media only screen and (min-width: 60rem) { body { padding: 0; background-image: url(../images/sayagata-400px-pattern.png); }
-  header, nav, main, footer { max-width: 80rem; margin: 0 auto; }
-  div#wrapper { max-width: 75rem; margin: 0 auto; -webkit-box-shadow: 0 0 10px #000; box-shadow: 0 0 10px #000; background-color: #FFF; }
+  header, nav, main, footer { max-width: 64rem; margin: 0 auto; }
+  div#wrapper { max-width: 64rem; margin: 0 auto; -webkit-box-shadow: 0 0 10px #000; box-shadow: 0 0 10px #000; background-color: #FFF; }
   div#headerWrapper { background-color: #10415f; }
-  main div.storyGrid { -ms-grid-columns: (1fr)[4]; grid-template-columns: repeat(4, 1fr); }
-  main figure.mainStory { -ms-grid-column: 1; -ms-grid-column-span: 3; grid-column: 1 / span 3; -ms-grid-row: 1; -ms-grid-row-span: 2; grid-row: 1 / span 2; }
-  footer div.linkGrid { -ms-grid-columns: (1fr)[4]; grid-template-columns: repeat(4, 1fr); } }
+  main div.visitGrid { -ms-grid-columns: (1fr)[4]; grid-template-columns: repeat(4, 1fr); } }
 
 /* end media query */
