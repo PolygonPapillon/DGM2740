@@ -21,8 +21,7 @@ body {
 /* ------------------------- header ------------------------- */
 header {
   //height: 100px;
-  background-color: $secondaryColor;
-  //position: relative;
+  background: $secondaryColor url("../images/headerL.jpg") no-repeat center;
 
   color: $fontColor;
   padding: 15px $gutter;
@@ -51,6 +50,10 @@ header {
   h2 {
     font-size: 1.5rem;
     font-weight: $normalWeight;
+  }
+  h1,
+  h2 {
+    text-shadow: 0 0 4px $secondaryColor;
   }
 } // end header
 
@@ -111,6 +114,28 @@ nav {
 //div#mainWrapper {}
 main {
   background-color: #fff;
+
+  h1 {
+    font-size: 2rem;
+    margin: 1rem 0 0 $gutter;
+    color: $primaryColor;
+  }
+  h2 {
+    font-size: 1.5rem;
+    margin: 0.75rem 0 0 $gutter;
+    color: lighten($primaryColor, 10%);
+  }
+  h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem $gutter;
+    color: darken($primaryColor, 20%);
+  }
+
+  p {
+    line-height: 120%;
+    color: $fontColor;
+    margin: 0.75rem;
+  }
   /*----- COLUMNS -----*/
 
   picture {
@@ -150,41 +175,31 @@ main {
     background-color: none;
   }
 
-
-  
   div.card:nth-child(1) {
-    background-image: url("../images/loews-hotelL.jpg");
+    background-image: url("../images/loews-hotel.jpg");
     background-repeat: no-repeat;
   }
-  div.card:nth-child(1) a.words {
-    background-color: $accent;
-  }
+
   div.card:nth-child(2) {
-    background-image: url("../images/freedom-trailL.jpg");
+    background-image: url("../images/freedom-trail.jpg");
     background-repeat: no-repeat;
   }
-  div.card:nth-child(2) a.words {
-    background-color: $accent;
-  }
+
   div.card:nth-child(3) {
-    background-image: url("../images/city-pass-bostonL.jpg");
+    background-image: url("../images/city-pass-boston.jpg");
     background-repeat: no-repeat;
   }
-  div.card:nth-child(3) a.words {
-    background-color: $accent;
-  }
+
   div.card:nth-child(4) {
-    background-image: url("../images/parker-houseL.jpg");
+    background-image: url("../images/parker-house.jpg");
     background-repeat: no-repeat;
-  }
-  div.card:nth-child(4) a.words {
-    background-color: $accent;
   }
 
   div.card a.words {
     display: block;
     width: 100%;
     height: 250px;
+    background-color: $accent;
     padding: 30px $gutter;
     text-decoration: none;
     text-align: center;
@@ -197,46 +212,16 @@ main {
     font-size: 2rem;
   }
 
-  a.words:hover {
+  div.card a.words:hover {
     background: none;
     background-color: none;
     border: none;
-    text-shadow: 0 0 4px black;
-    color: lighten($secondaryColor, 10%);
-    transition: all 0.5s ease-in;
+    text-shadow: 3px 3px 2px $accent;
+    h1,
+    i {
+      color: lighten($primaryColor, 35%);
+    }
   }
-
-  h1 {
-    font-size: 2rem;
-    margin: 1rem 0 0 $gutter;
-    color: $primaryColor;
-  }
-  h2 {
-    font-size: 1.5rem;
-    margin: 0.75rem 0 0 $gutter;
-    color: lighten($primaryColor, 10%);
-  }
-  h3 {
-    font-size: 1.2rem;
-    margin: 0.5rem $gutter;
-    color: darken($primaryColor, 20%);
-  }
-
-  p {
-    line-height: 120%;
-    color: $fontColor;
-    margin: 0.75rem;
-  }
-  /*  a {
-    display: block;
-    text-align: center;
-    font-weight: $boldWeight;
-    padding: 0.5rem 0;
-    color: $accent;
-    text-decoration: none;
-  } */
-
-  
 } // end main
 
 /* ------------------------- footer ------------------------- */
