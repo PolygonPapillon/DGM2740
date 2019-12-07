@@ -18,17 +18,31 @@ body {
   font-size: 16px;
 }
 
+/* grid area setup */
+#wrapper {
+  display: grid;
+  grid-template-areas: 
+    "hambNav"
+    "header"
+    "content"
+    "footer"
+    "regNav";
+    grid-template-columns: 100%;
+} 
+
 /* ------------------------- header ------------------------- */
 header {
+  grid-area: header;
   //height: 100px;
-  background: $secondaryColor;
+  width: 100%;
+  background-color: $secondaryColor;
 
   color: $fontColor;
   padding: 15px $gutter;
   border-bottom: 5px solid $accent;
 
   figure.logo {width: 20%; max-width: 120px;}
-    figure.logo img {width: 100%-$dblgutter; float: left; border-radius: $gutter; padding-right: $dblgutter;}
+  figure.logo img {width: 100%-$dblgutter; float: left; border-radius: $gutter; padding-right: $dblgutter;}
 
   form {
     float: right;
@@ -55,27 +69,19 @@ header {
 } // end header
 
 /* ------------------------- navigation ------------------------- */
-div#navWrapper {
-  background-color: $secondaryColor;
-  border-top: 5px solid $primaryColor;
-}
+div#hambNav {grid-area: hambNav;}
 nav {
-  button {
-    margin: 0.2rem $gutter;
-    background-color: transparent;
-    border: none;
-    font-size: 1.2rem;
-    color: $accent;
-  }
-
+  grid-area: regNav;
+  width: 100%;
+  background-color: $secondaryColor;
+  border-top: 5px solid $fontColor;
   ul {
     list-style-type: none;
     padding-left: $gutter;
     margin: 0;
     border: none;
   }
-  ul.hide {
-    display: none;
+  
   }
   ul li {
     border: none;
@@ -108,8 +114,9 @@ nav {
 } //end nav
 
 /* ------------------------- main ------------------------- */
-//div#mainWrapper {}
+
 main {
+  grid-area: content;
   background-color: #fff;
 
   h1 {
@@ -224,12 +231,11 @@ main {
 } // end main
 
 /* ------------------------- footer ------------------------- */
-div#footerWrapper {
-  background-color: $secondaryColor;
-  border-top: 5px solid $accent;
-}
+
 
 footer {
+  grid-area: footer;
+  background-color: $secondaryColor;
   width: 100%;
   border-top: 3px solid $fontColor;
 

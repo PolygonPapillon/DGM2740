@@ -1,11 +1,20 @@
+/* grid area setup */
+#wrapper {
+  grid-template-areas: 
+    "header header"
+    "regNav content"
+    "footer footer";
+}
+
 header {
   //position: relative;
 
   height: 145px;
 }
-
+div.hide {
+  display: none;
 nav {
-  button {
+  div.hide {
     display: none;
   }
   ul.hide {

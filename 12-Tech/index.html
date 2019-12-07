@@ -30,196 +30,118 @@
   <body>
     <div id="wrapper">
       <!-- header -->
-      <div id="headerWrapper" class="stayopen">
-        <header class="stayopen">
-          <form><input type="text" placeholder="search site" /></form>
-          <div>
-            <figure class="logo">
-              <img src="images/logo.png" alt="logo">
-            </figure>
-            <h1>TechWatch</h1>
-          </div>
-        </header>
+
+      <header class="stayopen">
+        <form><input type="text" placeholder="search site" /></form>
+        <div>
+          <figure class="logo">
+            <img src="images/logo.png" alt="logo" />
+          </figure>
+          <h1>TechWatch</h1>
+        </div>
+      </header>
+
+      <!-- hamburger navigation -->
+      <div id="hambNav" class="hide">
+        <a href="#navLinks">&#9776; &#8801;</a>
       </div>
 
       <!-- navigation -->
-      <div id="navWrapper">
-        <nav class="stayopen">
-          <button class="hide">
-            &#9776; Menu
-          </button>
 
-          <ul id="smallNav" class="hide">
-            <li><a href="#">Phones</a></li>
-            <li class="active"><a href="#">Tablets</a></li>
-            <li><a href="#">Laptops</a></li>
-            <li><a href="#">Games</a></li>
-            <li><a href="#">TVs</a></li>
-            <li><a href="#">Cameras</a></li>
-            <li><a href="#">Headsets</a></li>
-          </ul>
-        </nav>
-      </div>
+      <nav id="regNav" class="stayopen">
+        <div id="navLinks" class="hide">
+          <a href="#hambNav">X &#215; &#10754; &#10799;</a>
+        </div>
+
+        <ul>
+          <li><a href="#">Phones</a></li>
+          <li class="active"><a href="#">Tablets</a></li>
+          <li><a href="#">Laptops</a></li>
+          <li><a href="#">Games</a></li>
+          <li><a href="#">TVs</a></li>
+          <li><a href="#">Cameras</a></li>
+          <li><a href="#">Headsets</a></li>
+        </ul>
+      </nav>
 
       <!-- page content -->
-      <div id="mainWrapper">
-        <main class="stayopen">
-          <!-- slider images -->
-          <div class="my_slider">
-            <picture>
-              <source
-                srcset="images/slider-images/founders-memorial-boston.jpg"
-                media="(max-width: 28.12rem)"
-              />
-              <source
-                srcset="images/slider-images/founders-memorial-bostonL.jpg"
-                media="(min-width: 28.12rem)"
-              />
-              <img
-                src="images/slider-images/800-founders-memorial-boston-common-20x11.jpg"
-                alt="slider"
-              />
-              <div>Founders Memorial</div>
-            </picture>
 
-            <picture>
-              <source
-                srcset="images/slider-images/faneuil-hall-illustration.jpg"
-                media="(max-width: 28.12rem)"
-              />
-              <source
-                srcset="images/slider-images/faneuil-hall-illustrationL.jpg"
-                media="(min-width: 28.12rem)"
-              />
-              <img
-                src="images/slider-images/faneuil-hall-illustrationOP.jpg"
-                alt="slider"
-              />
-              <div>Faneuil Hall Illustration</div>
-            </picture>
+      <main class="stayopen">
+        <section>
+          <article>
+            <h2>First Choice Tablet</h2>
+            <p>
+              Competently deliver standardized benefits rather than unique
+              supply chains. Distinctively architect competitive process
+              improvements through focused interfaces. Progressively
+              administrate go forward ebusiness after parallel action items.
+              Proactively revolutionize crossplatform value via frictionless
+              total linkage. Conveniently productize best-of-breed process
+              improvements after interoperable metaservices.
+            </p>
+          </article>
+          <figure>
+            <img src="images/tablet1.jpg" alt="tablet 1" />
+          </figure>
+        </section>
 
-            <picture>
-              <source
-                srcset="images/slider-images/paul-revere-house.jpg"
-                media="(max-width: 28.12rem)"
-              />
-              <source
-                srcset="images/slider-images/paul-revere-houseL.jpg"
-                media="(min-width: 28.12rem)"
-              />
-              <img
-                src="images/slider-images/historic-site-paul-revere-house.jpg"
-                alt="slider"
-              />
-              <div>Paul Revere House</div>
-            </picture>
+        <hr class="fadeAway" />
 
-            <picture>
-              <source
-                srcset="images/slider-images/historic-boston-public-library.jpg"
-                media="(max-width: 28.12rem)"
-              />
-              <source
-                srcset="images/slider-images/historic-boston-public-libraryL.jpg"
-                media="(min-width: 28.12rem)"
-              />
-              <img
-                src="images/slider-images/historic-boston-public-libraryOP.jpg"
-                alt="slider"
-              />
-              <div>Historic Boston Public Library</div>
-            </picture>
+        <section>
+          <figure>
+            <img src="images/tablet2.jpg" alt="tablet 2" />
+          </figure>
+          <article>
+            <h2>Second Choice Tablet</h2>
+            <p>
+              Dramatically synergize top-line partnerships without dynamic
+              metaservices. Intrinsicly fashion best-of-breed synergy via
+              efficient networks. Continually architect functionalized materials
+              without prospective internal or "organic" sources. Conveniently
+              mesh flexible partnerships with low-risk high-yield architectures.
+              Interactively whiteboard resource maximizing solutions through
+              resource-leveling products.
+            </p>
+          </article>
+        </section>
 
-            <picture>
-              <source
-                srcset="images/slider-images/Old_State_House_Boston.jpg"
-                media="(max-width: 28.12rem)"
-              />
-              <source
-                srcset="images/slider-images/Old_State_House_BostonL.jpg"
-                media="(min-width: 28.12rem)"
-              />
-              <img
-                src="images/slider-images/Old_State_House_Boston_2009f.jpg"
-                alt="slider"
-              />
-              <div>Old State House</div>
-            </picture>
+        <hr class="fadeAway" />
 
-            <picture>
-              <source
-                srcset="images/slider-images/boston-cityscape.jpg"
-                media="(max-width: 28.12rem)"
-              />
-              <source
-                srcset="images/slider-images/boston-cityscapeL.jpg"
-                media="(min-width: 28.12rem)"
-              />
-              <img
-                src="images/slider-images/history-of-boston-cityscape.jpg"
-                alt="slider"
-              />
-              <div>Boston Cityscape</div>
-            </picture>
-          </div>
+        <section>
+          <article>
+            <h2>Third Choice Tablet</h2>
+            <p>
+              Engage customized internal or "organic" sources vis-a-vis
+              extensible infomediaries. Credibly target out-of-the-box value
+              after processcentric benefits. Intrinsicly syndicate holistic
+              intellectual capital via cutting-edge infomediaries. Holisticly
+              transform prospective technology before an expanded array of data.
+              Dynamically procrastinate cross-media leadership skills.
+            </p>
+          </article>
+          <figure>
+            <img src="images/tablet3.jpg" alt="tablet 3" />
+          </figure>
+        </section>
+      </main>
 
-          <hr class="fadeAway" />
-
-          <!-- visitGrid -->
-          <div class="visitGrid">
-            <div class="card">
-              <a class="words" href="#">
-                <i class="fas fa-bed"></i>
-                <h1>Places to stay</h1>
-              </a>
-            </div>
-
-            <div class="card">
-              <a class="words" href="#">
-                  <i class="far fa-map"></i>
-                 <!--  <i class="fas fa-map-signs"></i>
-                <i class="fas fa-building"></i>
-                <i class="fas fa-street-view"></i>
-                <i class="far fa-window-minimize"></i> -->
-                <h1>Walk the Red Line</h1>
-              </a>
-            </div>
-
-            <div class="card">
-              <a class="words" href="#">
-                <i class="fas fa-camera"></i>
-                <h1>Pass to the City</h1>
-              </a>
-            </div>
-
-            <div class="card">
-              <a class="words" href="#">
-                <i class="fas fa-utensils"></i>
-                <h1>Fine Dining</h1>
-              </a>
-            </div>
-          </div>
-          <!-- end visitGrid -->
-        </main>
-      </div>
-      <!-- end mainWrapper -->
+      <!-- end main -->
 
       <!-- footer -->
-      <div id="footerWrapper">
-        <footer class="stayOpen">
-          <!-- Social media icons -->
-          <div class="icons">
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-facebook"></i>
-            <i class="fab fa-pinterest"></i>
-            <i class="fab fa-deviantart"></i>
-          </div>
 
-          <p class="foot">
-            &#9679; &copy; 2019 Boston City &#9679; Login &#9679;
-          </p>
-        </footer>
-      </div>
+      <footer class="stayOpen">
+        <!-- Social media icons -->
+        <div class="icons">
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-pinterest"></i>
+          <i class="fab fa-deviantart"></i>
+        </div>
+
+        <p class="foot">
+          &#9679; &copy; 2019 TechWatch &#9679; School Project &#9679;
+        </p>
+      </footer>
     </div>
   </body>
 </html>
