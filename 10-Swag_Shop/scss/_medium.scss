@@ -4,7 +4,7 @@ header {
   height: 145px;
 }
 
-nav {
+/* nav {
   button {
     display: none;
   }
@@ -24,12 +24,84 @@ nav {
       text-align: center;
     }
   }
-}
+} */
 
-main {
-  div.visitGrid {
-    grid-template-columns: repeat(2, 1fr);
+/*  ----------------------- NAVIGATION --------------------------- */
+nav {
+  background-color: $secondaryColor;
+
+  // add space to the left to match the other left side elements DESIGN: Alignment
+  ul {
+    margin: 0 0 0 $gutter;
+    padding: 0;
   }
-}
+  //Change to a horizontal menu bar
+  ul>li {
+    width: auto;
+      float: left;
+      width: (100/6) * 1%;
+      border-right: 1px solid rgba(0, 0, 0, 0.3);
+      border-left: 1px solid rgba(0, 0, 0, 0.3);
+  }
+
+  // add a single line so that all menu items have lines on both sides
+  ul li:last-child {
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  //style the anchors
+  ul li a {
+    display: block;
+    background: none;
+    font-size: 0.9em;
+    padding: 0.9em 0.9em;
+    color: $fontColor;
+    text-decoration: none;
+    /*transition to transition over time on hover*/
+    -webkit-transition: background 0.3s linear;
+    transition: background 0.3s linear;
+  }
+
+  // on mouse hovber darken the menu item
+  ul li a:hover {
+    background: darken($secondaryColor, 5%);
+  }
+
+  // .parent class indicates dropdown by adding a down arrow to the parent list item
+  #primaryNav li.parent > a::before {
+    font-size: 0.75rem;
+    content: "\25BC";
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  //rules for the sub menu items
+  ul li ul {
+    z-index: 998;
+    position: absolute;
+    background-color: darken($secondaryColor, 3%);
+    left: -999em; /* pushes the menu way off to the side */
+    width: 12em; //width of the sub menu items when the drop down
+  }
+  ul li ul li {
+    /* overides the float and line from the parent ul */
+    float: none;
+    border: none;
+    border-top: solid 1px rgba(0, 0, 0, 0.2); /* vertical line seperating sub menu items*/
+  }
+
+  // this displays the menus as drop downs
+  ul li:hover ul {
+    left: auto;
+    margin-left: 0;
+  }
+
+  // darkens the anchor of the current-menu-item
+  li.current-menu-item a {
+    color: lighten($secondaryColor, 10%);
+    background-color: $primaryColor;
+  }
+} // end nav
+
+// main {}
 
 // footer {} // end footer

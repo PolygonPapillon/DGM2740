@@ -1,140 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- don't lie!!! -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
 
-<head>
-  <!-- don't lie!!! -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta charset="utf-8" />
+    <title>Swag Shop: Place Order</title>
+    <link href="css/styles.css" rel="stylesheet" />
 
-  <meta charset="utf-8" />
-  <title>Swag Shop: Place Order</title>
-  <link href="css/styles.css" rel="stylesheet" />
+    <!-- font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700"
+      rel="stylesheet"
+    />
+    <!-- this is the link to the older version that does NOT require an account.-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
+      integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+      crossorigin="anonymous"
+    />
+  </head>
 
-  <!-- font -->
-  <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel="stylesheet" />
-  <!-- this is the link to the older version that does NOT require an account.-->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
-    integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous" />
-</head>
+  <body>
+    <div id="wrapper">
+      <!-- header -->
+      <div id="headerWrapper" class="stayopen">
+        <header class="stayopen">
+          <form><input type="text" placeholder="search site" /></form>
+          <div>
+            <h1>Swag Shop</h1>
+            <h2>Where Cool Stuff Comes From</h2>
+          </div>
+        </header>
+      </div>
 
-<body>
-  <div id="wrapper">
-    <!-- header -->
-    <div id="headerWrapper" class="stayopen">
-      <header class="stayopen">
-        <form><input type="text" placeholder="search site" /></form>
-        <div>
-          <h1>Swag Shop</h1>
-          <h2>Where Cool Stuff Comes From</h2>
-        </div>
-      </header>
+      <!-- navigation -->
+      <div id="navWrapper">
+        <nav class="stayopen">
+          <button id="smallNav">
+            <span id="toOpen"><i>&equiv;</i> MENU</span> 
+            <span id="toClose"><i>&otimes;</i>CLOSE</span>
+          </button>
+
+          <ul id="primaryNav">
+            <li><a href="#">Home</a></li>
+            <li class="parent">
+              <a href="#">Products</a>
+              <ul>
+                <li><a href="#">Waterbottles</a></li>
+                <li><a href="#">Clothing</a></li>
+                <li><a href="#">Pens</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Deals</a></li>
+            <li class="current-menu-item"><a href="#">Order</a></li>
+            <li><a href="#">Customer Reviews</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- page content -->
+      <div id="mainWrapper">
+        <main class="stayopen">
+          <h1>Order Form</h1>
+
+          <form action="thanks.hmtl" method="GET" class="order">
+            <fieldset>
+              <legend>Customer Information</legend>
+              <label
+                ><span>Full Name</span
+                ><input
+                  type="text"
+                  name="name"
+                  placeholder="Full Name"
+                  class="infoField"
+                  required
+                />
+                *Required</label
+              >
+
+              <label
+                ><span>Phone Number</span
+                ><input
+                  type="tel"
+                  name="phone"
+                  class="infoField"
+                  placeholder="555-555-5555"
+                  pattern="[0-9-. ()]{10,14}"
+                  required
+                />
+                *Required</label
+              >
+
+              <label
+                ><span>Email</span
+                ><input type="email" name="email" class="infoField"
+              /></label>
+            </fieldset>
+
+            <fieldset>
+              <legend>Swag Information</legend>
+
+              <label
+                ><span>Date Needed</span
+                ><input type="date" name="needDate" class="infoField"
+              /></label>
+              <label
+                ><span>Business Name</span
+                ><input type="text" name="busName" class="infoField"
+              /></label>
+              <label
+                ><span>Business URL</span
+                ><input type="url" name="busURL" class="infoField"
+              /></label>
+              <span>Color</span
+              ><select name="color" class="infoField">
+                <option>Please Select &#9662;</option>
+                <option value="red">Red</option>
+                <option value="org">Orange</option>
+                <option value="yel">Yellow</option>
+                <option value="gre">Green</option>
+                <option value="blu">Blue</option>
+                <option value="pur">Purple</option>
+              </select>
+              <label
+                ><span>Quantity</span
+                ><input type="number" name="numOfStuff" class="infoField"
+              /></label>
+              <span>Material</span>
+              <label class="taps"
+                ><input type="radio" name="type" value="aluminum" />
+                Aluminum</label
+              >
+              <label class="taps"
+                ><input type="radio" name="type" value="plastic" />
+                Plastic</label
+              >
+              <label class="taps"
+                ><input type="radio" name="type" value="paper" /> Paper</label
+              >
+            </fieldset>
+            <fieldset>
+              <legend>Payment Information</legend>
+
+              <span>Card Type</span>
+              <label class="taps"
+                ><input type="radio" name="cardType" value="AmEx" /> American
+                Express</label
+              >
+              <label class="taps"
+                ><input type="radio" name="cardType" value="visa" /> Visa</label
+              >
+              <label class="taps"
+                ><input type="radio" name="cardType" value="master" />
+                MasterCard</label
+              >
+              <label class="taps"
+                ><input type="radio" name="cardType" value="discover" />
+                Discover</label
+              >
+              <label
+                ><span>Name on Card</span
+                ><input
+                  type="text"
+                  name="cardName"
+                  class="infoField"
+                  placeholder="Name on Card"
+                  required
+                />
+                *Required</label
+              >
+              <label
+                ><span>Card Number</span
+                ><input
+                  type="number"
+                  name="cardNum"
+                  class="infoField"
+                  required
+                />
+                *Required</label
+              >
+              <label
+                ><span>Expiration Date</span
+                ><input type="date" name="exDate" class="infoField" required />
+                *Required</label
+              >
+            </fieldset>
+            <br />
+            <input
+              type="submit"
+              name="submit"
+              value="Get My Swag"
+              class="submitbutton"
+            />
+            <!-- <input type="hidden" name="subject" value="swag order form" /> -->
+            <input name="redirect" type="hidden" value="thanks.html" />
+          </form>
+          <br /><br />
+        </main>
+      </div>
+      <!-- end mainWrapper -->
+
+      <!-- footer -->
+      <div id="footerWrapper">
+        <footer class="stayOpen">
+          <!-- Social media icons -->
+          <div class="icons">
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-pinterest"></i>
+            <i class="fab fa-deviantart"></i>
+          </div>
+
+          <p class="foot">
+            &#9679; &copy; 2019 Swag Shop &#9679; Login &#9679;
+          </p>
+        </footer>
+      </div>
+      <script async src="js/scripts.js"></script>
     </div>
-
-    <!-- navigation -->
-    <div id="navWrapper">
-      <nav class="stayopen">
-        <button onclick="toggleMenu()">
-          &#9776; Menu
-        </button>
-
-        <ul id="smallNav" class="hide">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="index.html">Products</a></li>
-          <li><a href="index.html">Deals</a></li>
-          <li class="active"><a href="index.html">Order</a></li>
-          <li><a href="index.html">Customer Reviews</a></li>
-        </ul>
-      </nav>
-    </div>
-
-    <!-- page content -->
-    <div id="mainWrapper">
-      <main class="stayopen">
-        <h1>Order Form</h1>
-
-        <form action="thanks.hmtl" method="GET" class="order">
-          <fieldset>
-            <legend>Customer Information</legend>
-            <label><span>Full Name</span><input type="text" name="name" placeholder="Full Name" class="infoField"
-                required />
-              *Required</label>
-
-            <label><span>Phone Number</span><input type="tel" name="phone" class="infoField" placeholder="555-555-5555"
-                pattern="[0-9-. ()]{10,14}" required />
-              *Required</label>
-
-            <label><span>Email</span><input type="email" name="email" class="infoField" /></label>
-          </fieldset>
-
-          <fieldset>
-            <legend>Swag Information</legend>
-
-            <label><span>Date Needed</span><input type="date" name="needDate" class="infoField" /></label>
-            <label><span>Business Name</span><input type="text" name="busName" class="infoField" /></label>
-            <label><span>Business URL</span><input type="url" name="busURL" class="infoField" /></label>
-            <span>Color</span><select name="color" class="infoField">
-              <option>Please Select &#9662;</option>
-              <option value="red">Red</option>
-              <option value="org">Orange</option>
-              <option value="yel">Yellow</option>
-              <option value="gre">Green</option>
-              <option value="blu">Blue</option>
-              <option value="pur">Purple</option>
-            </select>
-            <label><span>Quantity</span><input type="number" name="numOfStuff" class="infoField" /></label>
-            <span>Material</span>
-            <label class="taps"><input type="radio" name="type" value="aluminum" />
-              Aluminum</label>
-            <label class="taps"><input type="radio" name="type" value="plastic" />
-              Plastic</label>
-            <label class="taps"><input type="radio" name="type" value="paper" /> Paper</label>
-          </fieldset>
-          <fieldset>
-            <legend>Payment Information</legend>
-
-            <span>Card Type</span>
-            <label class="taps"><input type="radio" name="cardType" value="AmEx" /> American
-              Express</label>
-            <label class="taps"><input type="radio" name="cardType" value="visa" /> Visa</label>
-            <label class="taps"><input type="radio" name="cardType" value="master" />
-              MasterCard</label>
-            <label class="taps"><input type="radio" name="cardType" value="discover" />
-              Discover</label>
-            <label><span>Name on Card</span><input type="text" name="cardName" class="infoField"
-                placeholder="Name on Card" required />
-              *Required</label>
-            <label><span>Card Number</span><input type="number" name="cardNum" class="infoField" required />
-              *Required</label>
-            <label><span>Expiration Date</span><input type="date" name="exDate" class="infoField" required />
-              *Required</label>
-          </fieldset>
-          <br />
-          <input type="submit" name="submit" value="Get My Swag" class="submitbutton" />
-          <!-- <input type="hidden" name="subject" value="swag order form" /> -->
-          <input name="redirect" type="hidden" value="thanks.html" />
-        </form>
-        <br /><br />
-      </main>
-    </div>
-    <!-- end mainWrapper -->
-
-    <!-- footer -->
-    <div id="footerWrapper">
-      <footer class="stayOpen">
-        <!-- Social media icons -->
-        <div class="icons">
-          <i class="fab fa-twitter"></i>
-          <i class="fab fa-facebook"></i>
-          <i class="fab fa-pinterest"></i>
-          <i class="fab fa-deviantart"></i>
-        </div>
-
-        <p class="foot">
-          &#9679; &copy; 2019 Swag Shop &#9679; Login &#9679;
-        </p>
-      </footer>
-    </div>
-    <script async src="js/scripts.js"></script>
-  </div>
-</body>
-
+  </body>
 </html>
