@@ -1,0 +1,35 @@
+header {
+  //position: relative;
+
+  height: 145px;
+}
+
+nav {
+  button {
+    display: none;
+  }
+  ul.hide {
+    display: block;
+  }
+  ul {
+    padding-left: 0;
+    li {
+      width: auto;
+      float: left;
+      width: (100/7) * 1%;
+      border-right: 1px solid rgba(0, 0, 0, 0.3);
+      border-left: 1px solid rgba(0, 0, 0, 0.3);
+    }
+    li a {
+      text-align: center;
+    }
+  }
+}
+
+main {
+  div.visitGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+// footer {} // end footer
