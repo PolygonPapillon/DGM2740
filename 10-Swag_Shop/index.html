@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
   <meta charset="utf-8" />
-  <title>Boston City Tours: Visit</title>
+  <title>Swag Shop: Place Order</title>
   <link href="css/styles.css" rel="stylesheet" />
 
   <!-- font -->
@@ -23,8 +23,8 @@
       <header class="stayopen">
         <form><input type="text" placeholder="search site" /></form>
         <div>
-          <h1>Boston City</h1>
-          <h2>Where History Comes Alive</h2>
+          <h1>Swag Shop</h1>
+          <h2>Where Cool Stuff Comes From</h2>
         </div>
       </header>
     </div>
@@ -37,12 +37,11 @@
         </button>
 
         <ul id="smallNav" class="hide">
-          <li class="active"><a href="index.html">Visit</a></li>
-          <li><a href="index.html">Departments</a></li>
-          <li><a href="index.html">Services</a></li>
-          <li><a href="index.html">Pay Bills</a></li>
-          <li><a href="index.html">Meetings</a></li>
-          <li><a href="index.html">Help</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html">Products</a></li>
+          <li><a href="index.html">Deals</a></li>
+          <li class="active"><a href="index.html">Order</a></li>
+          <li><a href="index.html">Customer Reviews</a></li>
         </ul>
       </nav>
     </div>
@@ -50,10 +49,9 @@
     <!-- page content -->
     <div id="mainWrapper">
       <main class="stayopen">
-        <h1>Sign up for a cruise</h1>
-        <p>Please enter your information to schedlue a cruise.</p>
+        <h1>Order Form</h1>
 
-        <form action="FormToEmail.php" method="post" enctype="multipart/form-data" name="swagOrderForm" class="order">
+        <form action="thanks.hmtl" method="GET" class="order">
           <fieldset>
             <legend>Customer Information</legend>
             <label><span>Full Name</span><input type="text" name="name" placeholder="Full Name" class="infoField"
@@ -64,8 +62,7 @@
                 pattern="[0-9-. ()]{10,14}" required />
               *Required</label>
 
-            <label><span>Email</span><input type="email" name="email" class="infoField" required />
-              *Required</label>
+            <label><span>Email</span><input type="email" name="email" class="infoField" /></label>
           </fieldset>
 
           <fieldset>
@@ -74,7 +71,8 @@
             <label><span>Date Needed</span><input type="date" name="needDate" class="infoField" /></label>
             <label><span>Business Name</span><input type="text" name="busName" class="infoField" /></label>
             <label><span>Business URL</span><input type="url" name="busURL" class="infoField" /></label>
-            <span>Color</span><select name="color" class="zip" placeholder="Please Select">
+            <span>Color</span><select name="color" class="infoField">
+              <option>Please Select &#9662;</option>
               <option value="red">Red</option>
               <option value="org">Orange</option>
               <option value="yel">Yellow</option>
@@ -84,22 +82,22 @@
             </select>
             <label><span>Quantity</span><input type="number" name="numOfStuff" class="infoField" /></label>
             <span>Material</span>
-            <label><input type="radio" name="type" value="aluminum" />
+            <label class="taps"><input type="radio" name="type" value="aluminum" />
               Aluminum</label>
-            <label><input type="radio" name="type" value="plastic" />
+            <label class="taps"><input type="radio" name="type" value="plastic" />
               Plastic</label>
-            <label><input type="radio" name="type" value="paper" /> Paper</label>
+            <label class="taps"><input type="radio" name="type" value="paper" /> Paper</label>
           </fieldset>
           <fieldset>
             <legend>Payment Information</legend>
 
             <span>Card Type</span>
-            <label><input type="radio" name="cardType" value="AmEx" /> American
+            <label class="taps"><input type="radio" name="cardType" value="AmEx" /> American
               Express</label>
-            <label><input type="radio" name="cardType" value="visa" /> Visa</label>
-            <label><input type="radio" name="cardType" value="master" />
+            <label class="taps"><input type="radio" name="cardType" value="visa" /> Visa</label>
+            <label class="taps"><input type="radio" name="cardType" value="master" />
               MasterCard</label>
-            <label><input type="radio" name="cardType" value="discover" />
+            <label class="taps"><input type="radio" name="cardType" value="discover" />
               Discover</label>
             <label><span>Name on Card</span><input type="text" name="cardName" class="infoField"
                 placeholder="Name on Card" required />
@@ -111,7 +109,7 @@
           </fieldset>
           <br />
           <input type="submit" name="submit" value="Get My Swag" class="submitbutton" />
-          <input type="hidden" name="subject" value="swag order form" />
+          <!-- <input type="hidden" name="subject" value="swag order form" /> -->
           <input name="redirect" type="hidden" value="thanks.html" />
         </form>
         <br /><br />

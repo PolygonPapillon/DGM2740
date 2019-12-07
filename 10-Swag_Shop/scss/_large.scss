@@ -1,10 +1,10 @@
 
 
 body {padding: 0; background-image: url(../images/sayagata-400px-pattern.png)}
-header, nav, main, footer {max-width: 64rem; margin: 0 auto;}
+header, nav, main, footer {max-width: $maxWidth; margin: 0 auto;}
 
 div#wrapper {
-    max-width: 64rem;
+    max-width: $maxWidth;
     margin: 0 auto;
     box-shadow: 0 0 10px #000;
     background-color: #FFF;
@@ -20,10 +20,11 @@ div#headerWrapper {
 
 main {
     
-    div.visitGrid {
-        grid-template-columns: repeat(4, 1fr);
+    form.order .taps {
         
-    }
+        padding: .4rem 0;
+        
+      }
 
    
 } // end main
