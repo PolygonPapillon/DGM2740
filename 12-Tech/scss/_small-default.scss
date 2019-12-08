@@ -188,7 +188,8 @@ main {
     }
     figure {
       max-width: 96vw;
-      padding: $dblgutter;
+      height: auto;
+      padding: $gutter;
       img {
         width: 100%;
       }
