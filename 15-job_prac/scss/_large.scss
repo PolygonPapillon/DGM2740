@@ -1,0 +1,29 @@
+
+
+body {padding: 0; background-color: $backgroundColor;}
+header, nav, main, footer {max-width: 64rem; margin: 0 auto;}
+
+//header {}
+
+nav {
+    ul {
+        display: flex;
+        justify-content: flex-end;
+        
+    }
+    ul li {
+        width: auto;
+    }
+    ul li a {
+        padding: .5rem 1rem;
+        img {
+            padding: 0 3px;
+        }
+    }
+} // end nav
+
+main {
+    
+    figure.photo {width: 33.33%-$gutter;}
+    
+}// end main
