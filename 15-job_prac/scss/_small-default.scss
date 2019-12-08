@@ -50,7 +50,6 @@ header {
     align-self: flex-end;
     align-content: flex-start;
     padding-left: 5px;
-    padding-bottom: 2px;
   }
 
   h1 {
@@ -73,7 +72,10 @@ header {
 /* ------------------------- navigation ------------------------- */
 
 nav {
-  // ul li {}
+  ul {
+    padding-top: 0;
+    margin-top: 0;
+  }
 
   ul li a {
     display: block;
@@ -98,14 +100,18 @@ nav {
 main {
   figure.hero {
     width: 100%;
-  }
-  figure.hero img {
-    width: 100%;
+    img {
+      width: 100%;
+    }
   }
 
   div.banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "left right";
     width: 100%;
-
+    
     background-color: $secondaryColor;
     h1,
     h2 {
@@ -119,15 +125,13 @@ main {
     }
     .bannerRt {
       text-align: right;
+      grid-area: right;
+      margin: 0 $gutter;
     }
-  }
-
-  figure.photo {
-    width: 100%-$gutter;
-    margin: 0.5rem;
-  }
-  figure.photo img {
-    width: 100%-$gutter;
+    .bannerLft {
+      grid-area: left;
+      margin: $dblgutter $gutter;
+    }
   }
 
   h1 {
@@ -153,21 +157,35 @@ main {
     border: none;
     margin: 0.5rem $gutter;
   }
+
+  div.thePspot {
+    background-image: url("../images/aboutUs_gradient.png");
+  }
+
+  div.logoSpot {
+    max-width: 100%;
+    background-color: $bannerFontColor;
+    display: inline-flex;
+    flex-basis: auto;
+    justify-content: space-between;
+    img {
+      padding: 10px;
+      max-width: (100%/6);
+    }
+  }
 } // end main
 
 /* ------------------------- footer ------------------------- */
 div#footerWrapper {
   background-color: $primaryColor;
-  border-top: 5px solid $accent;
 }
 footer {
   width: 100%;
 
   p {
-    text-align: center;
-    color: $secondaryColor;
-    padding: 0.75rem 0;
-    font-size: 0.9rem;
+    color: $bannerFontColor;
+    padding: 0.75rem $gutter;
+    font-size: 0.8rem;
   }
 }
 
