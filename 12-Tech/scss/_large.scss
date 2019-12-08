@@ -36,8 +36,10 @@ nav {
       border-right: 1px solid rgba(0, 0, 0, 0.3);
       border-left: 1px solid rgba(0, 0, 0, 0.3);
     }
+   
     li a {
-      text-align: center;
+      text-align: center; 
+      padding-left: 0;
     }
   }
 } // end nav
