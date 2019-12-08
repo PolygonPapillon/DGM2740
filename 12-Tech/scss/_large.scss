@@ -16,6 +16,8 @@ div#wrapper {
     "regNav"
     "content"
     "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
   max-width: 64rem;
   margin: 0 auto;
   box-shadow: 0 0 10px #000;
@@ -40,6 +42,16 @@ nav {
   }
 } // end nav
 
-//main {} // end main
+main {
+  section { 
+    figure {
+    width: 30vw;
+  }
+  h2 {font-size: 2rem;}
+  p {font-size: 1.3rem;}
+}
+h1 {font-size: 2.8rem;}
+
+} // end main
 
 // footer {} // end footer

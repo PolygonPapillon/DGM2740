@@ -4,31 +4,38 @@
     "header header"
     "regNav content"
     "footer footer";
+  grid-template-columns: 150px auto;
+  grid-template-rows: auto;
 }
 
 header {
-  //position: relative;
+  margin-left: 150px;
 
   height: 145px;
+}
+.hide {
+  display: none;
 }
 nav {
   .hide {
     display: none;
   }
-  
+  height: 100%;
+  ul li a {padding-left: 15px;}
 }
 
- main {
-    section figure:nth-child(1) {
+main {
+
+  section figure {
+    width: 35vw;
+  }
+
+  section.picRt figure {
     float: right;
   }
 
-  section figure:nth-child(2) {
+  section.picLft figure {
     float: left;
-  }
-
-  section figure:nth-child(3) {
-    float: right;
   }
 }
 
