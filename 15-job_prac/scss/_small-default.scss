@@ -21,9 +21,8 @@ body {
 /* ------------------------- header ------------------------- */
 header {
   display: flex;
-
+  padding: $gutter 0 0 $gutter;
   color: $secondaryColor;
-  padding: $gutter 0 0 0;
 
   max-height: 150px;
 
@@ -72,26 +71,29 @@ header {
 
 nav {
   ul {
-    padding-top: 0;
-    margin-top: 0;
-  }
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    li a {
+      display: block;
+      text-align: center;
+      font-weight: $normalWeight;
+      padding: 0.75rem 1rem;
+      color: $fontColor;
+      text-decoration: none;
+      font-size: 0.8rem;
+      transition: background 0.75s ease, color 0.75s ease;
+      img {
+        padding: 0 3px;
+      }
+    }
 
-  ul li a {
-    display: block;
-    text-align: center;
-    font-weight: $normalWeight;
-    padding: 0.5rem 0;
-    color: $fontColor;
-    text-decoration: none;
-    font-size: 0.8rem;
-    transition: background 0.75s ease, color 0.75s ease;
-  }
-
-  ul li a:hover {
-    background-color: $primaryColor;
-  }
-  ul li.active a {
-    background-color: darken($primaryColor, 18%);
+    ul li a:hover {
+      background-color: $primaryColor;
+    }
+    ul li.active a {
+      background-color: darken($primaryColor, 18%);
+    }
   }
 } //end nav
 
@@ -106,31 +108,30 @@ main {
 
   div.banner {
     display: grid;
-    grid-template-columns: 2.4fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "left right";
+    grid-template-areas:
+      "left"
+      "right";
     width: 100%;
     padding: $gutter 0 $gutter 0;
-    margin: 0;
     background-color: $secondaryColor;
     h1,
     h2 {
       color: $accent;
       text-transform: uppercase;
       margin: 0;
-      padding: 0;
+      padding: 0 $gutter;
     }
     h3 {
       color: $bannerFontColor;
       margin: 0;
-      padding: 4px 0;
+      padding: 4px $dblgutter 4px 10%;
       font-size: 1.1rem;
     }
     p {
       color: $bannerFontColor;
       font-size: 0.8rem;
       margin: 0;
-      padding: $gutter 0;
+      padding: $gutter;
     }
     ul {
       padding: $gutter 0 $gutter 15%;
@@ -141,7 +142,7 @@ main {
       }
     }
     .bannerRt {
-      text-align: right;
+      text-align: left;
       grid-area: right;
       height: 100%;
       h2 {
@@ -175,7 +176,7 @@ main {
   p {
     line-height: 120%;
     color: $fontColor;
-    margin: .8rem;
+    margin: 0.8rem;
   }
 
   hr {
@@ -190,18 +191,25 @@ main {
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
-margin-bottom: 20px;
-    padding-top: 20px;
+    margin: 0 0 20px 0;
+    padding: 20px 0 0 0;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
-    gap: 20px;
+    gap: 0;
     justify-content: space-between;
     div.pSpots {
-      p {margin: 1rem 0 .5rem 0;}
+      margin: 0 $gutter;
+      p {
+        margin: 0.5rem 0 0.5rem 0;
+      }
+      h2 {
+        margin: 1rem 0 0 0;
+      }
       img {
-      width: 100%;}
+        width: 100%;
+      }
     }
   }
 
@@ -211,30 +219,40 @@ margin-bottom: 20px;
     background-position: top;
     background-size: cover;
 
-    padding-top: 20px;
-    margin-bottom: 20px;
+    margin: 0 0 20px 0;
+    padding: 20px 0 0 0;
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto 1fr;
-    gap: 20px;
-    justify-items: stretch;
-    justify-content: space-between;
-    div.anOspot img {
-      width: 100%;
+
+    grid-template-areas:
+      'infra'
+      'tech'
+      'live'
+      'graph';
+    gap: 0;
+    justify-content: stretch;
+
+    div.anOspot {
+      margin: 0 $gutter;
+      p {
+        margin: 0.5rem 0 0.5rem 0;
+      }
+      h2 {
+        margin: 1rem 0 0 0;
+      }
+      img {
+        width: 100%;
+      }
     }
     div.anOspot:nth-child(1) {
-      grid-column: 1;
-      grid-row: 1 / span 2;
+      grid-area: infra;
     } //infra
     div.anOspot:nth-child(2) {
-      grid-column: 2;
-      grid-row-start: 1;
-      grid-row-end: 2;
+      grid-area: tech;
     } //tech
     div.anOspot:nth-child(3) {
-      grid-column: 3;
-      grid-row: 1 / span 3;
+      grid-area: graph;
+
       position: relative;
       img {
         height: 100%;
@@ -258,8 +276,7 @@ margin-bottom: 20px;
       }
     } //graph
     div.anOspot:nth-child(4) {
-      grid-column: 1 / span 2;
-      grid-row: 3;
+      grid-area: live;
     } //live
   }
 
@@ -268,12 +285,14 @@ margin-bottom: 20px;
     width: 100%;
 
     background-color: $bannerFontColor;
-    display: inline-flex;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     img {
+      flex: 1 1 33%;
       padding: 10px;
       place-self: center stretch;
-      max-width: (100%/6);
+      max-width: (100%/3);
     }
   }
 } // end main

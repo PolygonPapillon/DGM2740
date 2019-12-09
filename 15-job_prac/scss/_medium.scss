@@ -1,15 +1,60 @@
 //header {}
-    
-//nav {}    
-    
 
+nav {
+  ul {
+    justify-content: space-evenly;
+    padding-left: 8%;
+  }
+} // end nav
 
 main {
+  div.banner {
+    padding: $gutter 0 $dblgutter 0;
+    margin: 0;
+    h3 {
+      font-size: 1rem;
+      padding-left: 8%;
+    }
+    h2 {
+      padding-top: 1.3rem;
+    }
+    ul {
+      padding: $gutter 0 $gutter 10%;
+      li {
+        font-size: 0.9rem;
+      }
+    }
+    p {
+      width: 80%;
+      padding-left: 8%;
+    }
+  }
+
+  div.thePspot {
+    grid-template-columns: repeat(2, 1fr);}
     
+  
+
+  div.theOtherSpot {
+    grid-template-columns: repeat(2, 1fr);
     
-    figure.photo {width: 50%-$gutter; float: right;}
+    grid-template-areas:
+      'infra tech'
+      'live graph';
+    }
     
-   
-    
-    
-}
+     
+  
+
+  div.logoSpot {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    img {
+      padding: 10px;
+      place-self: center stretch;
+      max-width: (100%/6);
+    }
+  }
+  
+} // end main
