@@ -24,8 +24,9 @@
       crossorigin="anonymous"
     />
   </head>
-  <div id="wrapper">
-    <body>
+
+  <body>
+    <div id="wrapper">
       <!-- header -->
       <div id="headerWrapper" class="stayopen">
         <header class="stayopen">
@@ -36,30 +37,30 @@
       <!-- navigation -->
       <div id="navWrapper">
         <nav>
-                <h1>Locations</h1>
+          <h1>Locations</h1>
         </nav>
       </div>
 
       <!-- page content -->
       <div id="mainWrapper">
         <main class="stayopen">
-         
-
           <!-- locations div group -->
 
           <div class="columnSet">
             <div class="location">
-                <div class="getInThere">
-              <figure class="map">
-                <img src="images/location1.PNG" alt="Maldives" />
-                <figcaption>Maldives</figcaption>
-              </figure>
+              <div class="getInThere">
+                <figure class="map">
+                  <img src="images/location1.PNG" alt="Maldives" />
+                  <figcaption>Maldives</figcaption>
+                </figure>
               </div>
               <div class="sbs">
                 <div>
                   <ion-icon name="pin"></ion-icon>
-                  <p>1323 Maldives Drive</br>
-                Maldives City, the Maldives 12345</p>
+                  <div class="address">
+                    <p>1323 Maldives Drive</p>
+                    <p>Maldives City, the Maldives 12345</p>
+                  </div>
                 </div>
                 <div>
                   <ion-icon name="tablet-portrait"></ion-icon>
@@ -69,17 +70,19 @@
             </div>
 
             <div class="location">
-                    <div class="getInThere">
-              <figure class="map">
-                <img src="images/location2.PNG" alt="Colorado" />
-                <figcaption>Colorado</figcaption>
-              </figure>
-            </div>
+              <div class="getInThere">
+                <figure class="map">
+                  <img src="images/location2.PNG" alt="Colorado" />
+                  <figcaption>Colorado</figcaption>
+                </figure>
+              </div>
               <div class="sbs">
                 <div>
                   <ion-icon name="pin"></ion-icon>
-                  <p>1323 Colorado Drive</br>
-                    Colorado City, CO 12345</p>
+                  <div class="address">
+                    <p>1323 Colorado Drive</p>
+                    <p>Colorado City, CO 12345</p>
+                  </div>
                 </div>
                 <div>
                   <ion-icon name="tablet-portrait"></ion-icon>
@@ -89,17 +92,19 @@
             </div>
 
             <div class="location">
-                    <div class="getInThere">
-              <figure class="map">
-                <img src="images/location3.png" alt="Indiana" />
-                <figcaption>Indiana</figcaption>
-              </figure>
-            </div>
+              <div class="getInThere">
+                <figure class="map">
+                  <img src="images/location3.png" alt="Indiana" />
+                  <figcaption>Indiana</figcaption>
+                </figure>
+              </div>
               <div class="sbs">
                 <div>
                   <ion-icon name="pin"></ion-icon>
-                  <p>1323 Indiana Drive</br>
-                    Indiana City, Indiana 12345</p>
+                  <div class="address">
+                    <p>1323 Indiana Drive</p>
+                    <p>Indiana City, Indiana 12345</p>
+                  </div>
                 </div>
                 <div>
                   <ion-icon name="tablet-portrait"></ion-icon>
@@ -109,17 +114,19 @@
             </div>
 
             <div class="location">
-                    <div class="getInThere">
-              <figure class="map">
-                <img src="images/location4.PNG" alt="Bangaladesh" />
-                <figcaption>Bangaladesh</figcaption>
-              </figure>
-            </div>
+              <div class="getInThere">
+                <figure class="map">
+                  <img src="images/location4.PNG" alt="Bangaladesh" />
+                  <figcaption>Bangaladesh</figcaption>
+                </figure>
+              </div>
               <div class="sbs">
                 <div>
                   <ion-icon name="pin"></ion-icon>
-                  <p>1323 Bangaladesh Drive</br>
-                    Bangal City, Bangaladesh 12345</p>
+                  <div class="address">
+                    <p>1323 Bangaladesh Drive</p>
+                    <p>Bangal City, Bangaladesh 12345</p>
+                  </div>
                 </div>
                 <div>
                   <ion-icon name="tablet-portrait"></ion-icon>
@@ -133,22 +140,29 @@
       </div>
 
       <!-- footer -->
-      <div id="footerWrapper">
+      <div id="footerWrapper" class="stayOpen">
         <footer class="stayOpen">
-          
-            <div>
-              <a href="#"><ion-icon name="bookmarks"></ion-icon></br>Reservation</a>
-            </div>
-            <div>
-              <a href="#"><ion-icon name="bed"></ion-icon></br>Rooms</a>
-            </div>
-            <div class="active">
-              <a href="#"><ion-icon name="pin"></ion-icon></br>Locations</a>
-            </div>
-          
+          <div>
+            <a href="#">
+              <ion-icon name="bookmarks"></ion-icon>
+              <p>Reservation</p>
+            </a>
+          </div>
+          <div>
+            <a href="#">
+              <ion-icon name="bed"></ion-icon>
+              <p>Rooms</p>
+            </a>
+          </div>
+          <div class="active">
+            <a href="#">
+              <ion-icon name="pin"></ion-icon>
+              <p>Locations</p>
+            </a>
+          </div>
         </footer>
       </div>
       <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-    </body>
-  </div>
+    </div>
+  </body>
 </html>

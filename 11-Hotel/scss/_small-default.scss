@@ -22,13 +22,10 @@ body {
 header {
   height: 70px;
   background-color: $secondaryColor;
-  
 
   color: $accent;
   padding: $gutter;
   border-bottom: 5px solid $accent;
-
-  
 
   h1 {
     font-size: 2rem;
@@ -44,11 +41,11 @@ div#navWrapper {
   border-bottom: 5px solid $primaryColor;
 }
 nav {
-    h1 {
-        font-size: 2rem;
-        margin: 1rem $gutter;
-        color: $primaryColor;
-      }
+  h1 {
+    font-size: 2rem;
+    margin: 1rem $gutter;
+    color: $primaryColor;
+  }
 } //end nav
 
 /* ------------------------- main ------------------------- */
@@ -64,7 +61,7 @@ main {
   } // end parent
 
   div.getInThere {
-      margin: $gutter;
+    margin: $gutter;
   }
   figure.map {
     margin: $dblgutter;
@@ -78,8 +75,8 @@ main {
   }
 
   figure.map figcaption {
-      font-size: 1.5rem;
-      padding: 5px 0;
+    font-size: 1.5rem;
+    padding: 5px 0;
   }
 
   div.sbs {
@@ -88,11 +85,20 @@ main {
     div {
       border: solid 1px $fontColor;
       display: flex;
+      align-items: center;
       ion-icon {
-          font-size: 3.5rem;
+        font-size: 2.5rem;
+        color: $fontColor;
       }
-      p {
+      div.address {
+        display: block;
+        margin: 0.75rem;
+        border: none;
+        p {
           text-align: left;
+          padding: 0;
+          margin: 0;
+        }
       }
     }
   }
@@ -164,23 +170,37 @@ div#footerWrapper {
 footer {
   width: 100%;
   border-top: 3px solid darken($fontColor, 15%);
+  background-color: $primaryColor;
 
+  display: flex;
+  flex-wrap: nowrap;
+  flex-basis: 1 1 33%;
+  justify-content: space-evenly;
   div {
-    display: block;
-    float: left;
-    width: (100/3) * 1%;
     border-right: 1px solid rgba(0, 0, 0, 0.3);
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    width: 33%;
   }
-  
+
   div a {
     display: block;
     text-align: center;
     font-weight: $boldWeight;
-    padding: 0.5rem 0;
-    color: $accent;
+    padding: 1rem 0;
+
     text-decoration: none;
     transition: background 0.75s ease, color 0.75s ease;
+    ion-icon {
+      text-align: center;
+      color: $accent;
+      font-size: 1.5rem;
+    
+    }
+    p {
+      text-align: center;
+      font-size: 1.1rem;
+      color: $accent;
+    }
   }
 
   div a:hover {
@@ -190,23 +210,6 @@ footer {
   div.active a {
     background-color: darken($secondaryColor, 15%);
     color: lighten($accent, 15%);
-  }
-
-  div.icons {
-    text-align-last: center;
-    margin: 10px $gutter;
-  }
-  div.icons i {
-    color: $accent;
-    font-size: 2rem;
-    padding: 0 15px;
-  }
-
-  p {
-    text-align: center;
-    color: darken($fontColor, 15%);
-    padding: 0.75rem 0;
-    font-size: 0.9rem;
   }
 }
 
